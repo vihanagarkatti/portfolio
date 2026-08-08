@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ara — Viha Nagarkatti</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .screen-gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; margin: 24px 0; }
+    .screen-gallery.cols-2 { grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }
+    .screen-item img { width: 100%; height: auto; display: block; border-radius: 8px; border: 1px solid var(--faint); transition: transform .2s ease, box-shadow .2s ease; }
+    .screen-item img:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(26,18,8,0.12); }
+    .screen-caption { font-size: 0.75rem; color: var(--mid); margin-top: 8px; line-height: 1.4; font-style: italic; }
+    .img-full { margin: 28px 0; border-radius: 8px; overflow: hidden; border: 1px solid var(--faint); }
+    .img-full img { width: 100%; height: auto; display: block; }
+    .img-caption { padding: 10px 16px; font-size: 0.78rem; color: var(--mid); font-style: italic; border-top: 1px solid var(--faint); background: var(--shelf-bg); }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><span class="nav-logo-dot"></span>Viha's Store</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="work.html">Experience</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="mailto:vihanagarkatti@gmail.com" class="nav-cta">Say hello 👋</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page">
+  <a href="projects.html" class="back-link">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    Back to projects
+  </a>
+
+  <header class="cs-hero fade-up">
+    <div class="cs-meta">
+      <span class="tag tag-soft" style="background:#EEE9FF;color:#4A3DB5;border-color:#6C5CE7;">UX Research</span>
+      <span class="tag tag-outline">Mobile App</span>
+      <span class="tag tag-filled">Published · Springer 2024</span>
+      <span class="tag tag-soft">Cambridge Presentation</span>
+    </div>
+    <h1 class="cs-title">Ara — Solo Travel Safety App</h1>
+    <p class="cs-subtitle">Offline SOS and real-time safety alerts for solo travellers — designed specifically for the 59% of solo travellers who are women. No existing competitor offered both features. Research published at Springer, presented at Cambridge.</p>
+
+    <div class="cs-stats">
+      <div class="cs-stat">
+        <span class="cs-stat-num">59%</span>
+        <span class="cs-stat-label">of solo travellers are women — primary design audience</span>
+      </div>
+      <div class="cs-stat">
+        <span class="cs-stat-num">0</span>
+        <span class="cs-stat-label">competitors offered offline SOS + real-time alerts together</span>
+      </div>
+      <div class="cs-stat">
+        <span class="cs-stat-num">12</span>
+        <span class="cs-stat-label">apps audited in competitive analysis — all missed the gap</span>
+      </div>
+      <div class="cs-stat">
+        <span class="cs-stat-num">2024</span>
+        <span class="cs-stat-label">Springer publication + Cambridge University conference</span>
+      </div>
+    </div>
+
+    <div class="phone-gallery">
+      <div class="phone-frame">
+        <div class="phone-frame-inner"><img src="assets/ara/ara-1.png" alt="Ara home screen" /></div>
+        <p class="phone-frame-caption">Home — safety overview</p>
+      </div>
+      <div class="phone-frame">
+        <div class="phone-frame-inner"><img src="assets/ara/ara-3.png" alt="Ara SOS screen" /></div>
+        <p class="phone-frame-caption">SOS — hold 3s to activate</p>
+      </div>
+      <div class="phone-frame">
+        <div class="phone-frame-inner"><img src="assets/ara/ara-5.png" alt="Ara trip planning" /></div>
+        <p class="phone-frame-caption">Plan a trip — safety first</p>
+      </div>
+      <div class="phone-frame">
+        <div class="phone-frame-inner"><img src="assets/ara/ara-6.png" alt="Ara community" /></div>
+        <p class="phone-frame-caption">Community channels</p>
+      </div>
+    </div>
+  </header>
+
+  <div class="cs-body">
+
+    <div class="cs-section fade-up">
+      <span class="cs-section-label">01 · Problem</span>
+      <h2>The gap nobody filled</h2>
+
+      <div class="phone-gallery">
+        <div class="phone-frame">
+          <div class="phone-frame-inner"><img src="assets/ara/ara-2.png" alt="Ara safety map with verified travelers" /></div>
+          <p class="phone-frame-caption">Safety map — Paris, verified travelers</p>
+        </div>
+        <div class="phone-frame">
+          <div class="phone-frame-inner"><img src="assets/ara/ara-4.png" alt="Ara bookings and stay" /></div>
+          <p class="phone-frame-caption">Bookings — safe stay verified</p>
+        </div>
+        <div class="phone-frame">
+          <div class="phone-frame-inner"><img src="assets/ara/ara-9.png" alt="Ara profile menu" /></div>
+          <p class="phone-frame-caption">Profile & safety preferences</p>
+        </div>
+      </div>
+
+      <div class="two-col" style="margin-top:24px;">
+        <p>A competitive audit of 12 solo travel apps found a consistent split: apps either offered basic SOS (no offline fallback) or itinerary planning (no safety features). The intersection — real-time alerts plus offline capability — was absent from the market.</p>
+        <p>Primary research confirmed what the data suggested: solo women travellers made safety compromises constantly — avoiding neighbourhoods, manually checking in with friends, skipping activities — because tools available left them unsupported.</p>
+      </div>
+    </div>
+
+    <div class="cs-section fade-up">
+      <span class="cs-section-label">02 · Research</span>
+      <h2>What the numbers told us</h2>
+
+      <div class="screen-gallery cols-2">
+        <div class="screen-item">
+          <img src="assets/ara/ara-3.png" alt="Research statistics and key data points" />
+          <p class="screen-caption">Research data — 59% solo travellers are women, competitive audit findings, safety compromise patterns from user interviews</p>
+        </div>
+        <div class="screen-item">
+          <img src="assets/ara/ara-4.png" alt="Competitive audit and user personas" />
+          <p class="screen-caption">Competitive audit + user personas — 12 apps benchmarked, 3 personas defined from primary research</p>
+        </div>
+      </div>
+
+      <div class="insight-grid" style="margin-top:24px;">
+        <div class="insight-card">
+          <span class="insight-card-icon">👩</span>
+          <h4>59% of solo travellers are women</h4>
+          <p>Yet existing apps were gender-neutral at best. No app centred women's specific safety needs.</p>
+        </div>
+        <div class="insight-card">
+          <span class="insight-card-icon">📡</span>
+          <h4>Offline is a survival feature</h4>
+          <p>Many high-risk scenarios (remote areas, crowded events, foreign SIM issues) occur exactly when connectivity is lowest.</p>
+        </div>
+        <div class="insight-card">
+          <span class="insight-card-icon">🤝</span>
+          <h4>Trust in strangers is high</h4>
+          <p>90% of solo travellers said they'd met others and felt safer travelling together. Verification was the missing trust layer.</p>
+        </div>
+        <div class="insight-card">
+          <span class="insight-card-icon">📍</span>
+          <h4>Alerts needed context, not raw data</h4>
+          <p>Raw crime data is anxiety-inducing. Users needed relative risk — "safer than average" vs "avoid after 9pm."</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cs-section fade-up">
+      <span class="cs-section-label">03 · Process</span>
+      <h2>From research to flows to screens</h2>
+
+      <div class="phone-gallery">
+        <div class="phone-frame">
+          <div class="phone-frame-inner"><img src="assets/ara/ara-5.png" alt="Plan new trip" /></div>
+          <p class="phone-frame-caption">Trip planning flow</p>
+        </div>
+        <div class="phone-frame">
+          <div class="phone-frame-inner"><img src="assets/ara/ara-7.png" alt="Ara community chat" /></div>
+          <p class="phone-frame-caption">Verified traveler chat</p>
+        </div>
+        <div class="phone-frame">
+          <div class="phone-frame-inner"><img src="assets/ara/ara-8.png" alt="Ara social feed" /></div>
+          <p class="phone-frame-caption">Community safety tips feed</p>
+        </div>
+      </div>
+
+      <div class="cs-quote">
+        <p>"The key insight was separating 'danger' (binary, high-alert) from 'awareness' (contextual, ambient). The app had to do both without conflating them — anxious users make poor decisions."</p>
+      </div>
+    </div>
+
+    <div class="cs-section fade-up">
+      <span class="cs-section-label">04 · Design</span>
+      <h2>Three pillars, seven screens</h2>
+
+      <div class="phone-gallery">
+        <div class="phone-frame">
+          <div class="phone-frame-inner"><img src="assets/ara/ara-1.png" alt="Ara home" /></div>
+          <p class="phone-frame-caption">Home — I'm Safe check-in</p>
+        </div>
+        <div class="phone-frame">
+          <div class="phone-frame-inner"><img src="assets/ara/ara-2.png" alt="Safety map" /></div>
+          <p class="phone-frame-caption">Safety map — verified zones</p>
+        </div>
+        <div class="phone-frame">
+          <div class="phone-frame-inner"><img src="assets/ara/ara-3.png" alt="SOS" /></div>
+          <p class="phone-frame-caption">SOS — silent, hold 3s</p>
+        </div>
+        <div class="phone-frame">
+          <div class="phone-frame-inner"><img src="assets/ara/ara-4.png" alt="Bookings" /></div>
+          <p class="phone-frame-caption">Bookings + safe stay</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cs-section fade-up">
+      <span class="cs-section-label">05 · Publication</span>
+      <h2>Research outcomes</h2>
+      <div class="two-col">
+        <div>
+          <p><strong>Springer publication (2024):</strong> The underlying research on solo travel safety gaps was accepted and published in a Springer conference proceedings volume, validating both the identified market gap and the proposed solution framework.</p>
+        </div>
+        <div>
+          <p><strong>Cambridge presentation:</strong> Findings were presented at Cambridge University, receiving feedback from UX researchers and travel industry professionals. Key takeaway incorporated: ambient awareness without triggering anxiety spirals.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;padding-bottom:48px;">
+      <a href="aashray.html" class="btn">← Aashray</a>
+      <a href="techie.html" class="btn btn-filled">Next: Techie →</a>
+    </div>
+
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-left">Viha Nagarkatti 🛒</div>
+    <ul class="footer-links">
+      <li><a href="https://www.linkedin.com/in/viha-nagarkatti-382a371a8" target="_blank">LinkedIn</a></li>
+      <li><a href="mailto:vihanagarkatti@gmail.com">Email</a></li>
+      <li><a href="projects.html">Projects</a></li>
+    </ul>
+  </div>
+</footer>
+
+<div class="chat-announce" id="chatAnnounce"><button class="announce-dismiss" id="announceDismiss">✕</button><span class="announce-headline">✈️ About Ara</span><p class="announce-body">Questions about this project?</p><button class="announce-cta" id="announceCta">ask us →</button></div>
+<button class="chat-toggle" id="chatToggle">🛒</button>
+<div class="chat-panel" id="chatPanel"><div class="chat-header"><span class="chat-header-icon">🧾</span><span>Store Assistant</span><button class="chat-close" id="chatClose">✕</button></div><div class="chat-messages" id="chatMessages"></div><div class="chat-input-row"><input class="chat-input" id="chatInput" type="text" placeholder="Ask about this project…" autocomplete="off" /><button class="chat-send" id="chatSend">↑</button></div></div>
+
+<script src="main.js"></script>
+</body>
+</html>

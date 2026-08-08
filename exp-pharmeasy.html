@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PharmEasy — Viha Nagarkatti</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    :root { --exp-accent: #00A651; --exp-bg: #E8F5F0; }
+    .contribution-block { margin-bottom: 56px; }
+    .contribution-num { font-family: var(--font-mono); font-size: 0.72rem; color: var(--exp-accent); letter-spacing: 0.1em; text-transform: uppercase; display: block; margin-bottom: 6px; }
+    .contribution-block > p { color: rgba(26,18,8,0.72); font-size: 0.95rem; line-height: 1.7; margin-bottom: 20px; }
+    .sub-contribution { border-left: 2px solid var(--faint); padding-left: 20px; margin: 20px 0; }
+    .sub-contribution h4 { font-size: 0.9rem; font-weight: 700; margin-bottom: 6px; }
+    .sub-contribution p { font-size: 0.88rem; color: rgba(26,18,8,0.68); line-height: 1.65; margin: 0; }
+    .sub-contribution + .sub-contribution { margin-top: 18px; }
+    .impact-callout { background: var(--exp-bg); border: 1.5px solid rgba(0,166,81,0.2); border-radius: 6px; padding: 20px 24px; margin: 24px 0; }
+    .impact-callout-label { font-family: var(--font-mono); font-size: 0.68rem; color: var(--exp-accent); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; display: block; }
+    .impact-callout p { font-size: 0.88rem; color: rgba(26,18,8,0.72); margin: 0; line-height: 1.6; }
+    .learnings-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-top: 24px; }
+    .learning-card { padding: 18px 20px; border: 1.5px solid var(--faint); border-radius: 6px; background: var(--paper); }
+    .learning-card-icon { font-size: 1.3rem; display: block; margin-bottom: 8px; }
+    .learning-card h4 { font-size: 0.85rem; font-weight: 700; margin-bottom: 6px; }
+    .learning-card p { font-size: 0.8rem; color: var(--mid); margin: 0; line-height: 1.5; }
+    /* screen styles */
+    .screen-gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; margin: 24px 0; }
+    .screen-item img { width: 100%; height: auto; display: block; border-radius: 8px; border: 1px solid var(--faint); transition: transform .2s ease, box-shadow .2s ease; }
+    .screen-item img:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(26,18,8,0.12); }
+    .screen-caption { font-size: 0.75rem; color: var(--mid); margin-top: 8px; line-height: 1.4; font-style: italic; }
+    .img-full { margin: 24px 0; border-radius: 8px; overflow: hidden; border: 1px solid var(--faint); }
+    .img-full img { width: 100%; height: auto; display: block; }
+    .img-caption { padding: 10px 16px; font-size: 0.78rem; color: var(--mid); font-style: italic; border-top: 1px solid var(--faint); background: var(--shelf-bg); }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><span class="nav-logo-dot"></span>Viha's Store</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="work.html" class="active">Experience</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="mailto:vihanagarkatti@gmail.com" class="nav-cta">Say hello 👋</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page">
+  <a href="work.html" class="back-link">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    Back to experience
+  </a>
+
+  <header class="cs-hero fade-up">
+    <div class="cs-meta">
+      <span class="tag tag-soft" style="background:#E8F5F0;color:#00A651;border-color:#00A651;">Product Design Intern</span>
+      <span class="tag tag-outline">Health Tech</span>
+      <span class="tag tag-soft">Mobile + Web</span>
+      <span class="tag tag-soft">Current</span>
+    </div>
+    <h1 class="cs-title">PharmEasy</h1>
+    <p class="cs-subtitle">India's leading online pharmacy and health platform. As a Product Design Intern, I worked across four distinct workstreams: user research for a 50+ conversational commerce feature, UX analysis of 10+ journeys, UI design across Android and web, and strategic internal documentation.</p>
+
+    <div class="cs-stats">
+      <div class="cs-stat"><span class="cs-stat-num" style="color:#00A651;">4</span><span class="cs-stat-label">workstreams: research, UX analysis, UI design, strategy</span></div>
+      <div class="cs-stat"><span class="cs-stat-num" style="color:#00A651;">50+</span><span class="cs-stat-label">age group — primary user segment for conversational commerce research</span></div>
+      <div class="cs-stat"><span class="cs-stat-num" style="color:#00A651;">10+</span><span class="cs-stat-label">user journeys mapped end-to-end across health features</span></div>
+      <div class="cs-stat"><span class="cs-stat-num" style="color:#00A651;">Jan '25</span><span class="cs-stat-label">start date · ongoing · cross-functional team</span></div>
+    </div>
+
+    <div class="phone-gallery">
+      <div class="phone-frame">
+        <div class="phone-frame-inner"><img src="assets/pharmeasy/pharmeasy-1.png" alt="PharmEasy onboarding" /></div>
+        <p class="phone-frame-caption">Assistant onboarding</p>
+      </div>
+      <div class="phone-frame">
+        <div class="phone-frame-inner"><img src="assets/pharmeasy/pharmeasy-7.png" alt="PharmEasy assistant home" /></div>
+        <p class="phone-frame-caption">Conversational home</p>
+      </div>
+      <div class="phone-frame">
+        <div class="phone-frame-inner"><img src="assets/pharmeasy/pharmeasy-2.png" alt="PharmEasy family profile" /></div>
+        <p class="phone-frame-caption">Family health profile</p>
+      </div>
+      <div class="phone-frame">
+        <div class="phone-frame-inner"><img src="assets/pharmeasy/pharmeasy-9.png" alt="PharmEasy reorder" /></div>
+        <p class="phone-frame-caption">One-tap reorder</p>
+      </div>
+    </div>
+  </header>
+
+  <div class="cs-body">
+
+    <div class="contribution-block fade-up">
+      <span class="contribution-num">Contribution 01</span>
+      <h2>Conversational Commerce Research — 50+ Users</h2>
+      <p>Led the research workstream for a conversational commerce feature targeting users aged 50+. This demographic represents a growing share of PharmEasy's user base — yet existing conversational UI patterns consistently fail them.</p>
+
+      <div class="phone-gallery">
+        <div class="phone-frame">
+          <div class="phone-frame-inner"><img src="assets/pharmeasy/pharmeasy-2.png" alt="Family health profile" /></div>
+          <p class="phone-frame-caption">Caregiver profile — daughter managing father's health</p>
+        </div>
+        <div class="phone-frame">
+          <div class="phone-frame-inner"><img src="assets/pharmeasy/pharmeasy-3.png" alt="Conversational health assistant" /></div>
+          <p class="phone-frame-caption">50+ conversational flow — voice + simplified UI</p>
+        </div>
+      </div>
+
+      <div class="sub-contribution">
+        <h4>User research — interviews with 50+ demographic</h4>
+        <p>Conducted in-depth interviews to surface healthcare concerns, digital friction points, and shopping preferences. Studied apps they already used comfortably (WhatsApp, YouTube) to understand existing muscle memory before designing new patterns.</p>
+      </div>
+      <div class="sub-contribution">
+        <h4>Caregiver use case discovery</h4>
+        <p>Identified a secondary user type no competitor had centred: the caregiver managing an elderly family member's health through the same app. Mapped 6 distinct caregiver scenarios and presented them as new product roadmap opportunities.</p>
+      </div>
+
+      <div class="impact-callout">
+        <span class="impact-callout-label">Impact</span>
+        <p>The caregiver use case expanded the definition of the target user for the conversational commerce feature — a net-new product direction surfaced through research, not assumption.</p>
+      </div>
+    </div>
+
+    <div class="divider" style="margin:40px 0;"></div>
+
+    <div class="contribution-block fade-up">
+      <span class="contribution-num">Contribution 02</span>
+      <h2>UX Analysis — Journey Mapping at Scale</h2>
+      <p>Conducted systematic competitor analysis and mapped 10+ user journeys across PharmEasy's health features, translating findings directly into sprint planning inputs.</p>
+
+      <div class="phone-gallery">
+        <div class="phone-frame">
+          <div class="phone-frame-inner"><img src="assets/pharmeasy/pharmeasy-4.png" alt="Order verification journey" /></div>
+          <p class="phone-frame-caption">Order verification — pharmacist review flow</p>
+        </div>
+        <div class="phone-frame">
+          <div class="phone-frame-inner"><img src="assets/pharmeasy/pharmeasy-5.png" alt="Conversational recommendation" /></div>
+          <p class="phone-frame-caption">50+ product recommendation — Accu-Chek for seniors</p>
+        </div>
+      </div>
+
+      <div class="impact-callout">
+        <span class="impact-callout-label">Impact</span>
+        <p>Journey maps for 10+ flows gave the product team a shared language for discussing user pain points. Competitive analysis of delivery guarantee UX directly shaped the "On Time or Free" feature update.</p>
+      </div>
+    </div>
+
+    <div class="divider" style="margin:40px 0;"></div>
+
+    <div class="contribution-block fade-up">
+      <span class="contribution-num">Contribution 03</span>
+      <h2>UI Design — Android, Web & Design System</h2>
+      <p>Designed across both mobile and web platforms, working within PharmEasy's existing design language while contributing new components that extended the system.</p>
+
+      <div class="phone-gallery">
+        <div class="phone-frame">
+          <div class="phone-frame-inner"><img src="assets/pharmeasy/pharmeasy-6.png" alt="Sore throat symptom checker" /></div>
+          <p class="phone-frame-caption">Symptom checker — sore throat flow</p>
+        </div>
+        <div class="phone-frame">
+          <div class="phone-frame-inner"><img src="assets/pharmeasy/pharmeasy-8.png" alt="Prescription upload" /></div>
+          <p class="phone-frame-caption">Prescription scan + auto-extract</p>
+        </div>
+        <div class="phone-frame">
+          <div class="phone-frame-inner"><img src="assets/pharmeasy/pharmeasy-9.png" alt="Reorder Metformin" /></div>
+          <p class="phone-frame-caption">One-tap reorder — Metformin 500mg</p>
+        </div>
+      </div>
+
+      <div class="impact-callout">
+        <span class="impact-callout-label">Impact</span>
+        <p>Design system contributions reduced duplication across 3 parallel product teams. Icon redesigns improved visual clarity confirmed in internal stakeholder reviews.</p>
+      </div>
+    </div>
+
+    <div class="divider" style="margin:40px 0;"></div>
+
+    <div class="contribution-block fade-up">
+      <span class="contribution-num">Contribution 04</span>
+      <h2>Strategy — SOPs & Internal Rollout</h2>
+      <p>In the final phase, I contributed to a less typical but equally valuable area: strategic documentation and internal feature rollout planning.</p>
+
+      <div class="phone-gallery">
+        <div class="phone-frame">
+          <div class="phone-frame-inner"><img src="assets/pharmeasy/pharmeasy-7.png" alt="PharmEasy assistant home" /></div>
+          <p class="phone-frame-caption">Assistant home — 4 quick actions</p>
+        </div>
+        <div class="phone-frame">
+          <div class="phone-frame-inner"><img src="assets/pharmeasy/pharmeasy-3.png" alt="Conversational flow" /></div>
+          <p class="phone-frame-caption">Voice + text — designed for 50+</p>
+        </div>
+      </div>
+
+      <div class="sub-contribution">
+        <h4>No-cost marketing strategy</h4>
+        <p>Developed organic, zero-budget marketing ideas for feature promotion across social channels — educational content formats aligned with PharmEasy's health-platform context and trust-sensitive brand.</p>
+      </div>
+      <div class="sub-contribution">
+        <h4>Standard Operating Procedures</h4>
+        <p>Authored SOPs for spreading feature awareness internally — digital channels (emailers, Slack) and offline (printed posters, team briefings) — ensuring frontline staff could articulate new features confidently from launch day.</p>
+      </div>
+
+      <div class="impact-callout">
+        <span class="impact-callout-label">What this taught me</span>
+        <p>A feature that launches without an internal communication plan is half-launched. SOPs gave me a product management perspective — design decisions have to survive the handoff to sales, support, and ops, not just engineering.</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="cs-section fade-up">
+      <span class="cs-section-label">Key Learnings</span>
+      <h2>What PharmEasy taught me</h2>
+      <div class="learnings-grid">
+        <div class="learning-card"><span class="learning-card-icon">👴</span><h4>Design for the edges, not the average</h4><p>Designing for 50+ users forced me to question every assumption about "normal" digital behaviour. The constraints made the work better across the board.</p></div>
+        <div class="learning-card"><span class="learning-card-icon">🔄</span><h4>Systems thinking at scale</h4><p>At PharmEasy's scale, inconsistency compounds. One misaligned component creates ripples across 3 product teams. Design the system first, the screen second.</p></div>
+        <div class="learning-card"><span class="learning-card-icon">🤝</span><h4>Cross-functional fluency</h4><p>Presenting to PMs, engineers, and stakeholders in the same week taught me to frame design decisions in terms of user value and business outcomes, not aesthetics.</p></div>
+        <div class="learning-card"><span class="learning-card-icon">📝</span><h4>Documentation is design</h4><p>Writing SOPs and journey maps is design work. Clarity on paper predicts clarity in the product. I treat documentation as a thinking tool, not a deliverable.</p></div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;padding-bottom:48px;">
+      <a href="work.html" class="btn">← All experience</a>
+      <a href="exp-iisc.html" class="btn btn-filled">Next: IISc →</a>
+    </div>
+
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-left">Viha Nagarkatti 🛒</div>
+    <ul class="footer-links">
+      <li><a href="https://www.linkedin.com/in/viha-nagarkatti-382a371a8" target="_blank">LinkedIn</a></li>
+      <li><a href="mailto:vihanagarkatti@gmail.com">Email</a></li>
+      <li><a href="work.html">Experience</a></li>
+    </ul>
+  </div>
+</footer>
+
+<div class="chat-announce" id="chatAnnounce"><button class="announce-dismiss" id="announceDismiss">✕</button><span class="announce-headline">💊 PharmEasy</span><p class="announce-body">Questions about this role?</p><button class="announce-cta" id="announceCta">ask us →</button></div>
+<button class="chat-toggle" id="chatToggle">🛒</button>
+<div class="chat-panel" id="chatPanel"><div class="chat-header"><span class="chat-header-icon">🧾</span><span>Store Assistant</span><button class="chat-close" id="chatClose">✕</button></div><div class="chat-messages" id="chatMessages"></div><div class="chat-input-row"><input class="chat-input" id="chatInput" type="text" placeholder="Ask about this role…" autocomplete="off" /><button class="chat-send" id="chatSend">↑</button></div></div>
+
+<script src="main.js"></script>
+</body>
+</html>

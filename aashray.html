@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aashray — Viha Nagarkatti</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    :root { --project-accent: #c0392b; }
+    /* Screen gallery */
+    .screen-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 16px;
+      margin: 24px 0;
+    }
+    .screen-gallery.wide { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+    .screen-item { position: relative; }
+    .screen-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 8px;
+      border: 1px solid var(--faint);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .screen-item img:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(26,18,8,0.12); }
+    .screen-caption {
+      font-size: 0.75rem;
+      color: var(--mid);
+      margin-top: 8px;
+      line-height: 1.4;
+      font-style: italic;
+    }
+    .screen-single img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 8px;
+      border: 1px solid var(--faint);
+    }
+    /* Full-width image block */
+    .img-full {
+      margin: 28px 0;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid var(--faint);
+    }
+    .img-full img { width: 100%; height: auto; display: block; }
+    .img-caption {
+      padding: 10px 16px;
+      font-size: 0.78rem;
+      color: var(--mid);
+      font-style: italic;
+      border-top: 1px solid var(--faint);
+      background: var(--shelf-bg);
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><span class="nav-logo-dot"></span>Viha's Store</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="work.html">Experience</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="mailto:vihanagarkatti@gmail.com" class="nav-cta">Say hello 👋</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page">
+  <a href="projects.html" class="back-link">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    Back to projects
+  </a>
+
+  <!-- HERO -->
+  <header class="cs-hero fade-up">
+    <div class="cs-meta">
+      <span class="tag tag-grocery">Social Impact</span>
+      <span class="tag tag-outline">Research-Led Design</span>
+      <span class="tag tag-soft">Mobile App</span>
+      <span class="tag tag-soft">Solo Project</span>
+    </div>
+    <h1 class="cs-title">Aashray</h1>
+    <p class="cs-subtitle">A discreet safety app designed around <em>why victims stay</em> — not just when they leave. Shelter maps, legal aid, financial assistance, and SOS in one place for domestic violence survivors.</p>
+
+    <div class="cs-stats">
+      <div class="cs-stat">
+        <span class="cs-stat-num">1 in 3</span>
+        <span class="cs-stat-label">women in India experience domestic violence</span>
+      </div>
+      <div class="cs-stat">
+        <span class="cs-stat-num">0</span>
+        <span class="cs-stat-label">existing apps combined shelter + legal + financial + SOS</span>
+      </div>
+      <div class="cs-stat">
+        <span class="cs-stat-num">86%</span>
+        <span class="cs-stat-label">of survivors stay due to financial dependency</span>
+      </div>
+      <div class="cs-stat">
+        <span class="cs-stat-num">4</span>
+        <span class="cs-stat-label">core support types in one discreet interface</span>
+      </div>
+    </div>
+
+    <!-- COVER SCREEN -->
+    <div class="phone-gallery">
+      <div class="phone-frame">
+        <div class="phone-frame-inner"><img src="assets/aashray/aashray-1.png" alt="Aashray welcome screen" /></div>
+        <p class="phone-frame-caption">Welcome & onboarding</p>
+      </div>
+      <div class="phone-frame">
+        <div class="phone-frame-inner"><img src="assets/aashray/aashray-2.png" alt="Aashray home dashboard" /></div>
+        <p class="phone-frame-caption">Home dashboard</p>
+      </div>
+      <div class="phone-frame">
+        <div class="phone-frame-inner"><img src="assets/aashray/aashray-5.png" alt="Aashray SOS screen" /></div>
+        <p class="phone-frame-caption">SOS — hold 3s, silent alert</p>
+      </div>
+      <div class="phone-frame">
+        <div class="phone-frame-inner"><img src="assets/aashray/aashray-6.png" alt="Aashray financial resources" /></div>
+        <p class="phone-frame-caption">Financial resources</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- BODY -->
+  <div class="cs-body">
+
+    <!-- PROBLEM -->
+    <div class="cs-section fade-up">
+      <span class="cs-section-label">01 · Problem</span>
+      <h2>The problem nobody was solving completely</h2>
+      <div class="two-col">
+        <p>Domestic violence apps in India fall into two camps: pure SOS tools, or information directories. None combined the full ecosystem of support a survivor actually needs — shelter, legal help, financial independence, and emergency response — in one discreet interface.</p>
+        <p>The deeper insight from research: most survivors don't leave immediately. They stay for financial reasons, for their children, out of fear. Any effective tool has to meet them where they are — not where we assume they should be.</p>
+      </div>
+
+      <div class="phone-gallery">
+        <div class="phone-frame">
+          <div class="phone-frame-inner"><img src="assets/aashray/aashray-3.png" alt="Aashray legal information screen" /></div>
+          <p class="phone-frame-caption">Legal information — DV Act simplified</p>
+        </div>
+        <div class="phone-frame">
+          <div class="phone-frame-inner"><img src="assets/aashray/aashray-4.png" alt="Aashray legal search" /></div>
+          <p class="phone-frame-caption">Legal search — alimony rights</p>
+        </div>
+        <div class="phone-frame">
+          <div class="phone-frame-inner"><img src="assets/aashray/aashray-7.png" alt="Aashray job listing" /></div>
+          <p class="phone-frame-caption">Discreet job listings</p>
+        </div>
+        <div class="phone-frame">
+          <div class="phone-frame-inner"><img src="assets/aashray/aashray-8.png" alt="Aashray wellness support" /></div>
+          <p class="phone-frame-caption">Wellness & counselling</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- RESEARCH -->
+    <div class="cs-section fade-up">
+      <span class="cs-section-label">02 · Research</span>
+      <h2>Understanding the emotional and systemic barriers</h2>
+      <p>Research drew on published studies, NGO reports, survivor testimonials (secondary sources), and interviews with social workers. The goal: understand the <em>why</em> behind staying, not just the what of leaving.</p>
+
+
+
+      <div class="insight-grid" style="margin-top:24px;">
+        <div class="insight-card">
+          <span class="insight-card-icon">💸</span>
+          <h4>Financial dependency</h4>
+          <p>86% of survivors cite financial dependence as the primary reason for not leaving. Most existing apps don't address this at all.</p>
+        </div>
+        <div class="insight-card">
+          <span class="insight-card-icon">⚖️</span>
+          <h4>Legal unawareness</h4>
+          <p>Most victims don't know their rights under the Protection of Women from DV Act. Free legal aid exists but is near-impossible to discover.</p>
+        </div>
+        <div class="insight-card">
+          <span class="insight-card-icon">🏠</span>
+          <h4>Shelter fragmentation</h4>
+          <p>Shelter info is scattered across government portals and NGO websites. No single discoverable map exists.</p>
+        </div>
+        <div class="insight-card">
+          <span class="insight-card-icon">👁️</span>
+          <h4>Fear of surveillance</h4>
+          <p>Survivors fear their abuser finding the app. Discretion — quick exit, disguise mode — is a safety feature, not a nice-to-have.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- USER JOURNEY -->
+    <div class="cs-section fade-up">
+      <span class="cs-section-label">03 · Process</span>
+      <h2>Mapping the survivor's journey</h2>
+
+
+
+      <div class="process-steps">
+        <div class="process-step"><span class="process-step-num">01</span><h4>Secondary Research</h4></div>
+        <div class="process-step"><span class="process-step-num">02</span><h4>NGO Interviews</h4></div>
+        <div class="process-step"><span class="process-step-num">03</span><h4>Competitive Audit</h4></div>
+        <div class="process-step"><span class="process-step-num">04</span><h4>Information Architecture</h4></div>
+        <div class="process-step"><span class="process-step-num">05</span><h4>Lo-Fi Wireframes</h4></div>
+        <div class="process-step"><span class="process-step-num">06</span><h4>Hi-Fi Prototype</h4></div>
+        <div class="process-step"><span class="process-step-num">07</span><h4>Usability Testing</h4></div>
+        <div class="process-step"><span class="process-step-num">08</span><h4>Iteration</h4></div>
+      </div>
+    </div>
+
+    <!-- INFORMATION ARCHITECTURE -->
+    <div class="cs-section fade-up">
+      <span class="cs-section-label">04 · Architecture</span>
+      <h2>Structuring four support systems into one app</h2>
+
+
+    </div>
+
+    <!-- DESIGN / SCREENS -->
+    <div class="cs-section fade-up">
+      <span class="cs-section-label">05 · Design</span>
+      <h2>Key screens and design decisions</h2>
+
+      <div class="cs-quote">
+        <p>"The most critical design decision was the Quick Exit feature — one tap closes the app and clears history. This isn't a feature; it's a trust signal."</p>
+      </div>
+
+      <div class="phone-gallery" style="margin-top:20px;">
+        <div class="phone-frame">
+          <div class="phone-frame-inner"><img src="assets/aashray/aashray-2.png" alt="Aashray home dashboard" /></div>
+          <p class="phone-frame-caption">Home — 4 support types, 2 taps away</p>
+        </div>
+        <div class="phone-frame">
+          <div class="phone-frame-inner"><img src="assets/aashray/aashray-6.png" alt="Financial resources" /></div>
+          <p class="phone-frame-caption">Financial resources — govt schemes</p>
+        </div>
+        <div class="phone-frame">
+          <div class="phone-frame-inner"><img src="assets/aashray/aashray-7.png" alt="Discreet job listings" /></div>
+          <p class="phone-frame-caption">Discreet employment listings</p>
+        </div>
+        <div class="phone-frame">
+          <div class="phone-frame-inner"><img src="assets/aashray/aashray-5.png" alt="SOS screen" /></div>
+          <p class="phone-frame-caption">SOS — silent, no trace left</p>
+        </div>
+      </div>
+
+      <div class="insight-grid" style="margin-top:32px;">
+        <div class="insight-card">
+          <span class="insight-card-icon">🎨</span>
+          <h4>Dark, calming palette</h4>
+          <p>Deep navy + warm terracotta — authoritative but not clinical. Darkness provides psychological privacy on a shared device.</p>
+        </div>
+        <div class="insight-card">
+          <span class="insight-card-icon">☝️</span>
+          <h4>2-tap maximum rule</h4>
+          <p>Any critical action (SOS, Quick Exit, shelter map) reachable within 2 taps from any screen. Validated against one-handed use.</p>
+        </div>
+        <div class="insight-card">
+          <span class="insight-card-icon">🔒</span>
+          <h4>Disguise mode</h4>
+          <p>App can appear as "Grocery List" or "Calculator" on the home screen. No logo or name visible externally.</p>
+        </div>
+        <div class="insight-card">
+          <span class="insight-card-icon">🌐</span>
+          <h4>Offline-first SOS</h4>
+          <p>Emergency alert queues for when connectivity returns — critical in scenarios where connectivity is lowest.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- IMPACT -->
+    <div class="cs-section fade-up">
+      <span class="cs-section-label">06 · Impact</span>
+      <h2>What this changes</h2>
+      <div class="two-col">
+        <div>
+          <p><strong>Design gap addressed:</strong> First proposed solution combining shelter discovery, legal aid, government scheme matching, and SOS in one interface — verified through competitive audit of 12 existing apps.</p>
+          <p><strong>Usability testing:</strong> 5 task-completion scenarios tested with social workers and students. Average task completion: under 3 taps. Quick Exit executed in under 1 second by all testers.</p>
+        </div>
+        <div>
+          <p><strong>What I would measure if shipped:</strong> Shelter booking initiations per week, legal consultation connections, Quick Exit usage (sign of real-world safety context), and return visits (signal of trust).</p>
+          <p><strong>What I learned:</strong> Safety design demands you design for the worst moment, not the average moment. Every micro-interaction carries weight when the stakes are this high.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;padding-bottom:48px;">
+      <a href="projects.html" class="btn">← All projects</a>
+      <a href="ara.html" class="btn btn-filled">Next: Ara →</a>
+    </div>
+
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-left">Viha Nagarkatti 🛒</div>
+    <ul class="footer-links">
+      <li><a href="https://www.linkedin.com/in/viha-nagarkatti-382a371a8" target="_blank">LinkedIn</a></li>
+      <li><a href="mailto:vihanagarkatti@gmail.com">Email</a></li>
+      <li><a href="projects.html">Projects</a></li>
+    </ul>
+  </div>
+</footer>
+
+<div class="chat-announce" id="chatAnnounce"><button class="announce-dismiss" id="announceDismiss">✕</button><span class="announce-headline">🛡️ About Aashray</span><p class="announce-body">Questions about this project? Ask away.</p><button class="announce-cta" id="announceCta">ask us →</button></div>
+<button class="chat-toggle" id="chatToggle">🛒</button>
+<div class="chat-panel" id="chatPanel"><div class="chat-header"><span class="chat-header-icon">🧾</span><span>Store Assistant</span><button class="chat-close" id="chatClose">✕</button></div><div class="chat-messages" id="chatMessages"></div><div class="chat-input-row"><input class="chat-input" id="chatInput" type="text" placeholder="Ask about this project…" autocomplete="off" /><button class="chat-send" id="chatSend">↑</button></div></div>
+
+<script src="main.js"></script>
+</body>
+</html>

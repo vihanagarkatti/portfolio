@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Work Experience — Viha Nagarkatti</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .work-hero { padding: 56px 0 48px; border-bottom: 1.5px solid var(--faint); margin-bottom: 56px; }
+    .work-hero .eyebrow { font-family: var(--font-hand); color: var(--accent); font-size: 1rem; margin-bottom: 8px; display: block; }
+    .work-hero p { font-size: 1.05rem; color: var(--mid); max-width: 520px; margin: 0; }
+
+    /* Timeline */
+    .timeline { position: relative; padding-left: 32px; }
+    .timeline::before { content: ''; position: absolute; left: 7px; top: 8px; bottom: 8px; width: 1.5px; background: var(--faint); }
+    .timeline-item { position: relative; margin-bottom: 52px; }
+    .timeline-item::before { content: ''; position: absolute; left: -29px; top: 6px; width: 12px; height: 12px; border-radius: 50%; border: 2px solid var(--ink); background: var(--paper); }
+    .timeline-item.current::before { background: var(--accent); border-color: var(--accent); }
+
+    /* Card base */
+    .exp-card {
+      border: 1.5px solid var(--faint);
+      border-radius: 6px;
+      overflow: hidden;
+      background: var(--paper);
+      transition: border-color .18s, transform .18s ease, box-shadow .18s ease;
+      display: block;
+      text-decoration: none;
+      color: var(--ink);
+    }
+    /* Clickable card hover */
+    a.exp-card:hover {
+      border-color: var(--ink);
+      transform: translate(-3px, -3px);
+      box-shadow: 5px 5px 0 var(--ink);
+    }
+    /* Non-clickable card (no deep-dive page yet) */
+    div.exp-card:hover { border-color: var(--ink); }
+
+    .exp-card-header { padding: 20px 24px 16px; display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 12px; border-bottom: 1.5px solid var(--faint); background: var(--shelf-bg); }
+    .exp-card-icon { font-size: 2rem; margin-bottom: 6px; display: block; }
+    .exp-card-company { font-size: 1.15rem; font-weight: 700; margin-bottom: 3px; }
+    .exp-card-role { font-size: 0.88rem; color: var(--mid); font-weight: 500; }
+    .exp-card-period { font-family: var(--font-mono); font-size: 0.72rem; color: var(--mid); background: var(--paper); padding: 4px 10px; border-radius: var(--r-pill); border: 1px solid var(--faint); white-space: nowrap; align-self: flex-start; }
+    .exp-card-body { padding: 20px 24px 24px; }
+    .exp-card-body p { font-size: 0.9rem; color: rgba(26,18,8,0.75); }
+    .exp-bullets { list-style: none; margin: 12px 0; }
+    .exp-bullets li { font-size: 0.88rem; color: rgba(26,18,8,0.7); padding: 6px 0 6px 20px; position: relative; line-height: 1.5; border-bottom: 1px solid var(--faint); }
+    .exp-bullets li:last-child { border-bottom: none; }
+    .exp-bullets li::before { content: '→'; position: absolute; left: 0; color: var(--accent); font-size: 0.85rem; }
+    .exp-card-cta { display: inline-block; margin-top: 16px; font-size: 0.85rem; font-weight: 700; color: var(--accent); text-decoration: none; }
+    a.exp-card:hover .exp-card-cta { text-decoration: underline; }
+
+    /* Education */
+    .edu-card { display: flex; gap: 20px; padding: 20px 24px; border: 1.5px solid var(--faint); border-radius: 6px; background: var(--paper); align-items: flex-start; margin-bottom: 12px; }
+    .edu-icon { font-size: 1.8rem; flex-shrink: 0; }
+    .edu-degree { font-weight: 700; font-size: 1rem; margin-bottom: 3px; }
+    .edu-school { font-size: 0.88rem; color: var(--mid); }
+    .edu-year { font-family: var(--font-mono); font-size: 0.72rem; color: var(--mid); margin-top: 4px; }
+
+    /* Skills */
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; margin-top: 40px; }
+    .skill-card { padding: 16px 18px; border: 1.5px solid var(--faint); border-radius: 6px; background: var(--shelf-bg); }
+    .skill-card-label { font-family: var(--font-mono); font-size: 0.68rem; color: var(--mid); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px; display: block; }
+    .skill-list { display: flex; flex-wrap: wrap; gap: 6px; }
+    .skill-pill { font-size: 0.78rem; font-weight: 500; padding: 3px 10px; background: var(--paper); border: 1px solid var(--faint); border-radius: var(--r-pill); color: var(--ink); }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><span class="nav-logo-dot"></span>Viha's Store</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="work.html" class="active">Experience</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="mailto:vihanagarkatti@gmail.com" class="nav-cta">Say hello 👋</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page">
+  <div class="work-hero fade-up">
+    <span class="eyebrow">🥫 Aisle 03 — Work Experience</span>
+    <h1>Where I've worked</h1>
+    <p>3+ years of hands-on design experience across health tech, ed-tech, government, research, and sports. Currently pursuing my Master's in HCI at the University of Maryland. Actively seeking Summer 2027 internships in the US.</p>
+    <div style="display:flex;gap:12px;margin-top:20px;flex-wrap:wrap;">
+      <a href="mailto:vihanagarkatti@gmail.com" class="btn btn-accent">Open to opportunities →</a>
+      <a href="https://www.linkedin.com/in/viha-nagarkatti-382a371a8" target="_blank" class="btn">LinkedIn</a>
+    </div>
+  </div>
+
+  <!-- TIMELINE — in chronological order, most recent first -->
+  <div class="timeline">
+
+    <!-- WAYGROUND (QUIZIZZ) — most recent, no deep-dive page yet -->
+    <div class="timeline-item current fade-up">
+      <div class="exp-card">
+        <div class="exp-card-header">
+          <div>
+            <span class="exp-card-icon">🎓</span>
+            <div class="exp-card-company">Wayground <span style="font-size:0.75rem;font-weight:400;color:var(--mid);">(formerly Quizizz)</span></div>
+            <div class="exp-card-role">Instructional Designer Consultant</div>
+          </div>
+          <span class="exp-card-period">Aug 2025 – Dec 2025</span>
+        </div>
+        <div class="exp-card-body">
+          <p>Consulted on instructional design and learning experience for Wayground, an ed-tech platform formerly known as Quizizz — applying UX and design thinking to educational content strategy and learner experience.</p>
+          <ul class="exp-bullets">
+            <li>Applied UX research methods to understand how learners interact with the platform — surfacing friction points in the learning flow and content consumption patterns</li>
+            <li>Designed instructional frameworks that balanced pedagogical best practices with intuitive user experience, ensuring content was engaging and accessible</li>
+            <li>Collaborated with product and content teams to align instructional design decisions with the platform's broader UX goals</li>
+          </ul>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;">
+            <span class="tag tag-soft">Instructional Design</span>
+            <span class="tag tag-soft">Ed-Tech</span>
+            <span class="tag tag-soft">UX Strategy</span>
+            <span class="tag tag-soft">Content Design</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PHARMEASY — clickable -->
+    <div class="timeline-item fade-up">
+      <a href="exp-pharmeasy.html" class="exp-card">
+        <div class="exp-card-header">
+          <div>
+            <span class="exp-card-icon">💊</span>
+            <div class="exp-card-company">PharmEasy</div>
+            <div class="exp-card-role">Product Design Intern</div>
+          </div>
+          <span class="exp-card-period">Jan 2025 – Jun 2025 · 6 months</span>
+        </div>
+        <div class="exp-card-body">
+          <p>India's leading online pharmacy and health platform. Led research for a 50+ conversational commerce feature, mapped 10+ user journeys, designed across Android and web, and authored internal launch SOPs.</p>
+          <ul class="exp-bullets">
+            <li>Led user research for a conversational commerce feature targeting users aged 50+, identifying a new caregiver use case that expanded the product roadmap</li>
+            <li>Mapped 10+ end-to-end user journeys across lab tests, physiotherapy, menstrual health, ambulance, and corporate healthcare features</li>
+            <li>Designed Android screens and a mobile-to-web redesign for the generic medicines landing page; contributed reusable components to the design system</li>
+            <li>Authored SOPs and a no-cost marketing strategy for internal feature rollouts across digital and offline channels</li>
+          </ul>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;">
+            <span class="tag tag-soft">User Research</span>
+            <span class="tag tag-soft">Design Systems</span>
+            <span class="tag tag-soft">Mobile Design</span>
+            <span class="tag tag-soft">Strategy</span>
+          </div>
+          <span class="exp-card-cta">Read full case study →</span>
+        </div>
+      </a>
+    </div>
+
+    <!-- IISc — clickable -->
+    <div class="timeline-item fade-up">
+      <a href="exp-iisc.html" class="exp-card">
+        <div class="exp-card-header">
+          <div>
+            <span class="exp-card-icon">🔬</span>
+            <div class="exp-card-company">Indian Institute of Science (IISc), Bangalore</div>
+            <div class="exp-card-role">Design Intern · Dept. of Design and Manufacturing</div>
+          </div>
+          <span class="exp-card-period">Oct 2024 – May 2025 · 7 months</span>
+        </div>
+        <div class="exp-card-body">
+          <p>Interned under Dr. Vishal Singh to design a 120+ page coffee table book for the department's Silver Jubilee — 25 years of history across 5 thematic chapters, from archival research to print-ready delivery.</p>
+          <ul class="exp-bullets">
+            <li>Researched 25 years of departmental history and coordinated content from dozens of faculty and alumni contributors</li>
+            <li>Designed the full visual system — typography, grid, and layout — across 120+ pages balancing academic rigour with accessible appeal</li>
+            <li>Delivered print-ready files with correct bleed, CMYK conversion, and font embedding — first hands-on print production experience</li>
+          </ul>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;">
+            <span class="tag tag-soft">Editorial Design</span>
+            <span class="tag tag-soft">Typography</span>
+            <span class="tag tag-soft">Print Design</span>
+            <span class="tag tag-soft">Content Strategy</span>
+          </div>
+          <span class="exp-card-cta">Read full case study →</span>
+        </div>
+      </a>
+    </div>
+
+    <!-- NUAVA — clickable -->
+    <div class="timeline-item fade-up">
+      <a href="exp-nuava.html" class="exp-card">
+        <div class="exp-card-header">
+          <div>
+            <span class="exp-card-icon">🏅</span>
+            <div class="exp-card-company">Nuava</div>
+            <div class="exp-card-role">UI/UX Designer · Sole Designer</div>
+          </div>
+          <span class="exp-card-period">Jun 2024 – Jul 2024 · 2 months</span>
+        </div>
+        <div class="exp-card-body">
+          <p>Sole designer on a 0→1 sports management web app for school coaches — replacing spreadsheet and WhatsApp workflows with fixture scheduling, tournament brackets, and student performance dashboards.</p>
+          <ul class="exp-bullets">
+            <li>Benchmarked PlayHQ and SportEasy to shape first-release feature scope — avoiding complexity competitors had shipped that users found confusing</li>
+            <li>Designed the core dashboard, fixture scheduling, tournament brackets, and performance tracking modules end-to-end</li>
+            <li>Collaborated directly with engineers throughout the process; delivered hi-fi mockups ready for handoff within a 2-month engagement</li>
+          </ul>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;">
+            <span class="tag tag-soft">0→1 Product Design</span>
+            <span class="tag tag-soft">Dashboard Design</span>
+            <span class="tag tag-soft">Figma</span>
+            <span class="tag tag-soft">User Flows</span>
+          </div>
+          <span class="exp-card-cta">Read full case study →</span>
+        </div>
+      </a>
+    </div>
+
+    <!-- DIGITAL INDIA CORP — clickable -->
+    <div class="timeline-item fade-up">
+      <a href="exp-digitalindia.html" class="exp-card">
+        <div class="exp-card-header">
+          <div>
+            <span class="exp-card-icon">🏛️</span>
+            <div class="exp-card-company">Digital India Corporation — Government of India</div>
+            <div class="exp-card-role">UI/UX Design Intern</div>
+          </div>
+          <span class="exp-card-period">May 2022 – Jul 2022 · 3 months</span>
+        </div>
+        <div class="exp-card-body">
+          <p>Worked with the Head of UX Design in a 3-person team designing Poshan Tracker — a national nutrition-tracking app for frontline Anganwadi health workers, across web and Android.</p>
+          <ul class="exp-bullets">
+            <li>Designed accessibility-first interfaces for users with varying digital literacy operating in low-connectivity rural field conditions</li>
+            <li>Streamlined field-data entry workflows for child growth and nutrition monitoring — reducing steps for routines repeated dozens of times per day</li>
+            <li>Designed across both web admin dashboard (supervisors) and Android field app (frontline workers), maintaining consistency between the two contexts</li>
+          </ul>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;">
+            <span class="tag tag-soft">GovTech</span>
+            <span class="tag tag-soft">Accessibility</span>
+            <span class="tag tag-soft">Public Health</span>
+            <span class="tag tag-soft">Android + Web</span>
+          </div>
+          <span class="exp-card-cta">Read full case study →</span>
+        </div>
+      </a>
+    </div>
+
+    <!-- TRIPPLECROCHET — no deep-dive -->
+    <div class="timeline-item fade-up">
+      <div class="exp-card">
+        <div class="exp-card-header">
+          <div>
+            <span class="exp-card-icon">🧶</span>
+            <div class="exp-card-company">tripplecrochet</div>
+            <div class="exp-card-role">Founder · Small Business</div>
+          </div>
+          <span class="exp-card-period">Jul 2022 – Present · Ongoing</span>
+        </div>
+        <div class="exp-card-body">
+          <p>A small handmade crochet business — run end-to-end, from product design and pattern-making to social media and order fulfilment. Pattern-following and modular design thinking translate directly to design systems work.</p>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;">
+            <span class="tag tag-soft">Small Business</span>
+            <span class="tag tag-soft">Brand & Social</span>
+          </div>
+          <a href="https://www.instagram.com/tripplecrochet/" target="_blank" rel="noopener" style="display:inline-block;margin-top:16px;font-size:0.85rem;font-weight:700;color:var(--accent);">View on Instagram →</a>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /timeline -->
+
+  <!-- EDUCATION -->
+  <div class="divider"></div>
+  <section class="fade-up" style="margin-bottom:56px;">
+    <h2 style="margin-bottom:24px;">Education</h2>
+    <div style="display:flex;flex-direction:column;gap:12px;">
+      <div class="edu-card">
+        <span class="edu-icon">🎓</span>
+        <div>
+          <div class="edu-degree">Master of Science — Human Computer Interaction</div>
+          <div class="edu-school">University of Maryland, College Park</div>
+          <div class="edu-year">Expected graduation: 2028 · United States</div>
+        </div>
+      </div>
+      <div class="edu-card">
+        <span class="edu-icon">🎨</span>
+        <div>
+          <div class="edu-degree">Bachelor of Design — Interaction Design</div>
+          <div class="edu-school">Srishti Manipal Institute of Art, Design and Technology, Bengaluru</div>
+          <div class="edu-year">Graduated 2025 · Bengaluru, India</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="fade-up" style="margin-bottom:64px;">
+    <h2 style="margin-bottom:8px;">Skills & Tools</h2>
+    <p style="color:var(--mid);font-size:0.88rem;margin-bottom:24px;">The tools I reach for every day and the competencies built through real projects.</p>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <span class="skill-card-label">Design</span>
+        <div class="skill-list">
+          <span class="skill-pill">Figma</span>
+          <span class="skill-pill">Framer</span>
+          <span class="skill-pill">Adobe Illustrator</span>
+          <span class="skill-pill">Photoshop</span>
+          <span class="skill-pill">After Effects</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <span class="skill-card-label">Research</span>
+        <div class="skill-list">
+          <span class="skill-pill">Usability Testing</span>
+          <span class="skill-pill">User Interviews</span>
+          <span class="skill-pill">Journey Mapping</span>
+          <span class="skill-pill">Service Blueprinting</span>
+          <span class="skill-pill">Competitive Audit</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <span class="skill-card-label">Process</span>
+        <div class="skill-list">
+          <span class="skill-pill">Design Thinking</span>
+          <span class="skill-pill">Agile / Sprint</span>
+          <span class="skill-pill">Design Systems</span>
+          <span class="skill-pill">Prototyping</span>
+          <span class="skill-pill">A/B Testing</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <span class="skill-card-label">Dev</span>
+        <div class="skill-list">
+          <span class="skill-pill">HTML</span>
+          <span class="skill-pill">CSS</span>
+          <span class="skill-pill">Basic JS</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div style="text-align:center;padding:48px 0 32px;border-top:1.5px solid var(--faint);" class="fade-up">
+    <span style="font-family:var(--font-hand);font-size:1.1rem;color:var(--accent);display:block;margin-bottom:8px;">Looking for your next hire?</span>
+    <h2 style="margin-bottom:16px;">Let's talk.</h2>
+    <p style="color:var(--mid);max-width:420px;margin:0 auto 24px;">Seeking Summer 2027 product design internships in the US. Master's student at the University of Maryland. Target companies include Google, Meta, Figma, Airbnb, and more.</p>
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+      <a href="mailto:vihanagarkatti@gmail.com" class="btn btn-accent">Email me</a>
+      <a href="https://www.linkedin.com/in/viha-nagarkatti-382a371a8" target="_blank" class="btn">LinkedIn</a>
+    </div>
+  </div>
+
+</div><!-- /page -->
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-left">Viha Nagarkatti 🛒</div>
+    <ul class="footer-links">
+      <li><a href="https://www.linkedin.com/in/viha-nagarkatti-382a371a8" target="_blank">LinkedIn</a></li>
+      <li><a href="mailto:vihanagarkatti@gmail.com">Email</a></li>
+      <li><a href="projects.html">Projects</a></li>
+    </ul>
+  </div>
+</footer>
+
+<div class="chat-announce" id="chatAnnounce"><button class="announce-dismiss" id="announceDismiss">✕</button><span class="announce-headline">🥫 Work Experience</span><p class="announce-body">Want to know more about Viha's roles?</p><button class="announce-cta" id="announceCta">ask us →</button></div>
+<button class="chat-toggle" id="chatToggle">🛒</button>
+<div class="chat-panel" id="chatPanel"><div class="chat-header"><span class="chat-header-icon">🧾</span><span>Store Assistant</span><button class="chat-close" id="chatClose">✕</button></div><div class="chat-messages" id="chatMessages"></div><div class="chat-input-row"><input class="chat-input" id="chatInput" type="text" placeholder="type something…" autocomplete="off" /><button class="chat-send" id="chatSend">↑</button></div></div>
+
+<script src="main.js"></script>
+</body>
+</html>

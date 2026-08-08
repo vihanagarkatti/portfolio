@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IISc Bangalore — Viha Nagarkatti</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    :root { --exp-accent: #6C4FBB; --exp-bg: #F0EBFA; }
+    .contribution-block { margin-bottom: 52px; }
+    .contribution-num { font-family: var(--font-mono); font-size: 0.72rem; color: var(--exp-accent); letter-spacing: 0.1em; text-transform: uppercase; display: block; margin-bottom: 6px; }
+    .contribution-block > p { color: rgba(26,18,8,0.72); font-size: 0.95rem; line-height: 1.7; margin-bottom: 20px; }
+    .sub-contribution { border-left: 2px solid var(--faint); padding-left: 20px; margin: 20px 0; }
+    .sub-contribution h4 { font-size: 0.9rem; font-weight: 700; margin-bottom: 6px; }
+    .sub-contribution p { font-size: 0.88rem; color: rgba(26,18,8,0.68); line-height: 1.65; margin: 0; }
+    .sub-contribution + .sub-contribution { margin-top: 18px; }
+    .impact-callout { background: var(--exp-bg); border: 1.5px solid rgba(108,79,187,0.2); border-radius: 6px; padding: 20px 24px; margin: 24px 0; }
+    .impact-callout-label { font-family: var(--font-mono); font-size: 0.68rem; color: var(--exp-accent); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; display: block; }
+    .impact-callout p { font-size: 0.88rem; color: rgba(26,18,8,0.72); margin: 0; line-height: 1.6; }
+    .learnings-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-top: 24px; }
+    .learning-card { padding: 18px 20px; border: 1.5px solid var(--faint); border-radius: 6px; background: var(--paper); }
+    .learning-card-icon { font-size: 1.3rem; display: block; margin-bottom: 8px; }
+    .learning-card h4 { font-size: 0.85rem; font-weight: 700; margin-bottom: 6px; }
+    .learning-card p { font-size: 0.8rem; color: var(--mid); margin: 0; line-height: 1.5; }
+    .chapter-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 10px; margin: 20px 0; }
+    .chapter-pill { padding: 12px 14px; background: var(--exp-bg); border-radius: 6px; text-align: center; }
+    .chapter-pill-num { font-family: var(--font-mono); font-size: 0.65rem; color: var(--exp-accent); display: block; margin-bottom: 4px; }
+    .chapter-pill span:last-child { font-size: 0.78rem; font-weight: 600; }
+    .placeholder-block { background: var(--shelf-bg); border: 1.5px dashed rgba(26,18,8,.18); border-radius: 6px; padding: 32px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; text-align: center; margin: 20px 0; min-height: 180px; }
+    .placeholder-block p { font-size: 0.78rem; color: rgba(26,18,8,.35); margin: 0; }
+    .placeholder-block code { font-size: 0.72rem; color: rgba(26,18,8,.45); background: var(--faint); padding: 4px 10px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><span class="nav-logo-dot"></span>Viha's Store</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="work.html" class="active">Experience</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="mailto:vihanagarkatti@gmail.com" class="nav-cta">Say hello 👋</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page">
+  <a href="work.html" class="back-link">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    Back to experience
+  </a>
+
+  <header class="cs-hero fade-up">
+    <div class="cs-meta">
+      <span class="tag tag-soft" style="background:#F0EBFA;color:#6C4FBB;border-color:#6C4FBB;">Design Intern</span>
+      <span class="tag tag-outline">Editorial Design</span>
+      <span class="tag tag-soft">Publication</span>
+      <span class="tag tag-soft">Research Institution</span>
+    </div>
+    <h1 class="cs-title">Indian Institute of Science (IISc), Bangalore</h1>
+    <p class="cs-subtitle">Interned under Dr. Vishal Singh to design and curate a 120+ page coffee table book for the Department of Design and Manufacturing's Silver Jubilee — 25 years of departmental history told through visual storytelling, editorial layout, and content curation.</p>
+
+    <div class="cs-stats">
+      <div class="cs-stat"><span class="cs-stat-num" style="color:#6C4FBB;">25</span><span class="cs-stat-label">years of departmental history documented and designed</span></div>
+      <div class="cs-stat"><span class="cs-stat-num" style="color:#6C4FBB;">120+</span><span class="cs-stat-label">page publication with full editorial design ownership</span></div>
+      <div class="cs-stat"><span class="cs-stat-num" style="color:#6C4FBB;">5</span><span class="cs-stat-label">thematic chapters structured and designed</span></div>
+      <div class="cs-stat"><span class="cs-stat-num" style="color:#6C4FBB;">6 mo</span><span class="cs-stat-label">internship duration · Oct 2024 – Mar 2025</span></div>
+    </div>
+
+    <div class="cs-img-block" style="background:#F0EBFA;">
+      <div style="padding:28px 24px;">
+        <p style="font-family:var(--font-mono);font-size:0.68rem;color:#6C4FBB;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:14px;">Book structure — 5 chapters</p>
+        <div class="chapter-grid">
+          <div class="chapter-pill"><span class="chapter-pill-num">CH. 01</span><span>Founding & Vision</span></div>
+          <div class="chapter-pill"><span class="chapter-pill-num">CH. 02</span><span>Faculty & Research</span></div>
+          <div class="chapter-pill"><span class="chapter-pill-num">CH. 03</span><span>Student Journeys</span></div>
+          <div class="chapter-pill"><span class="chapter-pill-num">CH. 04</span><span>Milestones</span></div>
+          <div class="chapter-pill"><span class="chapter-pill-num">CH. 05</span><span>Looking Forward</span></div>
+        </div>
+      </div>
+      <p class="cs-img-caption">IISc Dept. of Design & Manufacturing · Silver Jubilee Coffee Table Book · Oct 2024 – Mar 2025</p>
+    </div>
+  </header>
+
+  <div class="cs-body">
+
+    <div class="contribution-block fade-up">
+      <span class="contribution-num">Contribution 01</span>
+      <h2>Research & Content Curation</h2>
+      <p>Before any layout decisions were made, the project required deep research into 25 years of departmental history — work closer to archival research than typical design work.</p>
+
+      <div class="sub-contribution">
+        <h4>Departmental history research</h4>
+        <p>Researched the founding story, evolution, and key milestones of the Department of Design and Manufacturing since inception. Worked from archival documents, past publications, and institutional records to build an accurate historical narrative across five decades of academic work.</p>
+      </div>
+      <div class="sub-contribution">
+        <h4>Faculty and alumni content coordination</h4>
+        <p>Coordinated content collection from faculty and alumni spanning 25 years — gathering reflections, achievements, and personal stories. Managed multiple revision rounds while maintaining a consistent narrative voice across dozens of contributors with very different writing styles.</p>
+      </div>
+
+      <div class="impact-callout">
+        <span class="impact-callout-label">Impact</span>
+        <p>Built a single coherent narrative thread from fragmented, decades-old institutional material — turning disparate faculty contributions into a publication with a clear emotional and chronological arc.</p>
+      </div>
+    </div>
+
+    <div class="divider" style="margin:40px 0;"></div>
+
+    <div class="contribution-block fade-up">
+      <span class="contribution-num">Contribution 02</span>
+      <h2>Visual Storytelling & Layout Design</h2>
+      <p>Designed the full visual language of the publication — balancing the rigour expected of an academic institution with the warmth needed for a book meant to be enjoyed, not just referenced.</p>
+
+      <div class="sub-contribution">
+        <h4>Typography and grid systems</h4>
+        <p>Established a typographic system and grid structure that could flex across content types — dense faculty bios, large-format photography spreads, and pull-quote moments — while maintaining visual consistency across 120+ pages. The system had to work for the academic scrutiniser and the casual alumni reader alike.</p>
+      </div>
+      <div class="sub-contribution">
+        <h4>Dual-audience design</h4>
+        <p>Designed with two audiences in mind: design academics who would scrutinise the rigour, and a broader audience (alumni, donors, prospective students) who needed an accessible entry point. Careful use of pull quotes, photography, and white space created breathing room in dense academic content.</p>
+      </div>
+
+      <div class="placeholder-block">
+        <span style="font-size:1.6rem;">📖</span>
+        <p>Add your spread designs and layout samples here</p>
+        <code>assets/iisc-spread-1.png · assets/iisc-cover.png</code>
+      </div>
+
+      <div class="impact-callout">
+        <span class="impact-callout-label">Impact</span>
+        <p>The grid system designed for this project allowed rapid, consistent layout of 120+ pages without sacrificing visual variety — robust enough to handle both dense text and full-bleed photography.</p>
+      </div>
+    </div>
+
+    <div class="divider" style="margin:40px 0;"></div>
+
+    <div class="contribution-block fade-up">
+      <span class="contribution-num">Contribution 03</span>
+      <h2>Print Production & Delivery</h2>
+      <p>Delivered print-ready files to specification — a discipline distinct from screen design that requires close attention to physical production constraints.</p>
+
+      <div class="sub-contribution">
+        <h4>Print-ready file preparation</h4>
+        <p>Prepared final files accounting for bleed, trim, colour mode (CMYK conversion from RGB working files), and font embedding — ensuring zero production surprises at the printer. First hands-on experience with print production constraints distinct from the screen-first design work I'd done previously.</p>
+      </div>
+
+      <div class="impact-callout">
+        <span class="impact-callout-label">What this taught me</span>
+        <p>Print is unforgiving in a way screens aren't — there's no "ship a fix later." It forced a level of precision and proofing discipline that has made me more careful in digital design too.</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="cs-section fade-up">
+      <span class="cs-section-label">Key Learnings</span>
+      <h2>What IISc taught me</h2>
+      <div class="learnings-grid">
+        <div class="learning-card"><span class="learning-card-icon">📚</span><h4>Design as historical interpretation</h4><p>Designing for an archive means making editorial judgement calls — what story to tell, what to leave out. It's design as authorship, not just arrangement.</p></div>
+        <div class="learning-card"><span class="learning-card-icon">🖨️</span><h4>Production discipline</h4><p>First real exposure to print production constraints. A different muscle from digital design, and one I'm glad I built early.</p></div>
+        <div class="learning-card"><span class="learning-card-icon">🗂️</span><h4>Managing many stakeholders</h4><p>Coordinating from dozens of faculty and alumni contributors taught me process — clear templates and deadlines matter as much as design skill.</p></div>
+        <div class="learning-card"><span class="learning-card-icon">⚖️</span><h4>Balancing rigour and warmth</h4><p>Academic publications can feel cold. Finding the visual language that respected the institution's gravity while still feeling human was the core design challenge.</p></div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;padding-bottom:48px;">
+      <a href="exp-pharmeasy.html" class="btn">← PharmEasy</a>
+      <a href="exp-digitalindia.html" class="btn btn-filled">Next: Digital India Corp →</a>
+    </div>
+
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-left">Viha Nagarkatti 🛒</div>
+    <ul class="footer-links">
+      <li><a href="https://www.linkedin.com/in/viha-nagarkatti-382a371a8" target="_blank">LinkedIn</a></li>
+      <li><a href="mailto:vihanagarkatti@gmail.com">Email</a></li>
+      <li><a href="work.html">Experience</a></li>
+    </ul>
+  </div>
+</footer>
+
+<div class="chat-announce" id="chatAnnounce"><button class="announce-dismiss" id="announceDismiss">✕</button><span class="announce-headline">🔬 IISc Bangalore</span><p class="announce-body">Questions about this role?</p><button class="announce-cta" id="announceCta">ask us →</button></div>
+<button class="chat-toggle" id="chatToggle">🛒</button>
+<div class="chat-panel" id="chatPanel"><div class="chat-header"><span class="chat-header-icon">🧾</span><span>Store Assistant</span><button class="chat-close" id="chatClose">✕</button></div><div class="chat-messages" id="chatMessages"></div><div class="chat-input-row"><input class="chat-input" id="chatInput" type="text" placeholder="Ask about this role…" autocomplete="off" /><button class="chat-send" id="chatSend">↑</button></div></div>
+
+<script src="main.js"></script>
+</body>
+</html>

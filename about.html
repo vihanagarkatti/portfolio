@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Viha Nagarkatti</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 64px;
+      padding: 56px 0 48px;
+      border-bottom: 1.5px solid var(--faint);
+      margin-bottom: 56px;
+    }
+    .about-photo-col { position: relative; }
+    .photo-frame {
+      width: 100%;
+      aspect-ratio: 3/4;
+      border: 2px solid var(--ink);
+      border-radius: 4px;
+      overflow: hidden;
+      background: var(--shelf-bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .photo-placeholder-text {
+      font-family: var(--font-hand);
+      font-size: 0.9rem;
+      color: rgba(26,18,8,0.3);
+      text-align: center;
+      padding: 20px;
+      line-height: 1.4;
+    }
+    /* If you add a photo: img inside .photo-frame will fill it */
+    .photo-frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .photo-caption {
+      font-family: var(--font-hand);
+      font-size: 0.9rem;
+      color: var(--mid);
+      text-align: center;
+      margin-top: 10px;
+      transform: rotate(-0.5deg);
+    }
+
+    .about-text-col { padding-top: 8px; }
+    .about-eyebrow { font-family: var(--font-hand); color: var(--accent); font-size: 1rem; margin-bottom: 10px; display: block; }
+    .about-text-col h1 { margin-bottom: 20px; line-height: 1.1; }
+    .about-text-col p { font-size: 1rem; color: rgba(26,18,8,0.75); line-height: 1.7; margin-bottom: 16px; }
+
+    .about-fact-strip {
+      display: flex;
+      gap: 24px;
+      margin: 28px 0;
+      flex-wrap: wrap;
+    }
+    .about-fact {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      color: var(--mid);
+    }
+    .about-fact-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
+
+    /* Personality section */
+    .personality-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin: 40px 0;
+    }
+    .personality-card {
+      padding: 20px;
+      border: 1.5px solid var(--faint);
+      border-radius: 6px;
+      background: var(--shelf-bg);
+    }
+    .personality-card-emoji { font-size: 1.6rem; display: block; margin-bottom: 10px; }
+    .personality-card h3 { font-size: 0.9rem; font-weight: 700; margin-bottom: 6px; }
+    .personality-card p { font-size: 0.82rem; color: var(--mid); margin: 0; line-height: 1.5; }
+
+    /* Design philosophy */
+    .philosophy-section { margin: 56px 0; }
+    .philosophy-section h2 { margin-bottom: 24px; }
+    .philosophy-items { display: flex; flex-direction: column; gap: 0; }
+    .philosophy-item {
+      padding: 20px 0;
+      border-bottom: 1px solid var(--faint);
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 24px;
+    }
+    .philosophy-item:first-child { border-top: 1px solid var(--faint); }
+    .philosophy-label { font-family: var(--font-mono); font-size: 0.72rem; color: var(--mid); letter-spacing: 0.08em; text-transform: uppercase; padding-top: 3px; }
+    .philosophy-text { font-size: 0.92rem; color: rgba(26,18,8,0.75); line-height: 1.6; }
+    .philosophy-text strong { color: var(--ink); font-weight: 600; }
+
+    /* Currently section */
+    .currently-section { margin: 48px 0; }
+    .currently-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+      margin-top: 20px;
+    }
+    .currently-item {
+      padding: 14px 16px;
+      border: 1.5px solid var(--faint);
+      border-radius: 6px;
+      background: var(--paper);
+    }
+    .currently-item-label { font-size: 0.68rem; font-family: var(--font-mono); color: var(--mid); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; display: block; }
+    .currently-item-value { font-size: 0.88rem; font-weight: 500; }
+
+    @media (max-width: 768px) {
+      .about-grid { grid-template-columns: 1fr; gap: 32px; }
+      .photo-frame { max-width: 280px; margin: 0 auto; }
+      .philosophy-item { grid-template-columns: 1fr; gap: 6px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><span class="nav-logo-dot"></span>Viha's Store</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="work.html">Experience</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="mailto:vihanagarkatti@gmail.com" class="nav-cta">Say hello 👋</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page">
+
+  <!-- ABOUT SPLIT -->
+  <div class="about-grid fade-up">
+    <div class="about-photo-col">
+      <div class="photo-frame">
+        <!-- Replace with: <img src="assets/viha-photo.jpg" alt="Viha Nagarkatti"> -->
+        <!-- To add your photo: save it as assets/viha-photo.jpg and uncomment the line above -->
+        <div class="photo-placeholder-text">
+          📸<br/><br/>Add your photo here:<br/><br/><code style="font-size:0.7rem;opacity:0.6;">assets/viha-photo.jpg</code><br/><br/>Uncomment the img tag in about.html
+        </div>
+      </div>
+      <p class="photo-caption">Viha, Bengaluru 🌿</p>
+    </div>
+    <div class="about-text-col">
+      <span class="about-eyebrow">🍶 Hello there</span>
+      <h1>I'm Viha Nagarkatti</h1>
+
+      <p>I'm a product designer and HCI Master's student at the University of Maryland — I think in systems, build in Figma, and have a genuine soft spot for hand-drawn things (as you may have noticed).</p>
+
+      <p>I'm drawn to design problems that sit at the intersection of human behaviour and social impact — the kind where getting the details right actually matters. My work spans mobile apps, conversational UI, service design, and publication design, always grounded in real research before anything gets near a canvas.</p>
+
+      <p>My research has been published in Springer and presented at Cambridge University, which still surprises me when I say it out loud. It's reinforced a conviction I hold strongly: <strong>design without evidence is decoration.</strong></p>
+
+      <div class="about-fact-strip">
+        <span class="about-fact"><span class="about-fact-dot"></span>HCI Master's student · University of Maryland</span>
+        <span class="about-fact"><span class="about-fact-dot"></span>Based in the US (College Park, MD)</span>
+        <span class="about-fact"><span class="about-fact-dot"></span>Open to Summer 2027 internships</span>
+        <span class="about-fact"><span class="about-fact-dot"></span>Published researcher</span>
+      </div>
+
+      <div style="display:flex;gap:10px;flex-wrap:wrap;">
+        <a href="mailto:vihanagarkatti@gmail.com" class="btn btn-accent">vihanagarkatti@gmail.com</a>
+        <a href="https://www.linkedin.com/in/viha-nagarkatti-382a371a8" target="_blank" class="btn">LinkedIn →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- PERSONALITY -->
+  <section class="fade-up">
+    <h2 style="margin-bottom:6px;">A few things about me</h2>
+    <p style="color:var(--mid);margin-bottom:28px;font-size:0.9rem;">The things that inform my design sensibility, outside of work.</p>
+    <div class="personality-grid">
+      <div class="personality-card">
+        <span class="personality-card-emoji">🛒</span>
+        <h3>Grocery store enthusiast</h3>
+        <p>I genuinely love browsing grocery stores — the colour blocking, the product hierarchies, the way everything vies for attention. It's accidental UX everywhere. (Hence this portfolio.)</p>
+      </div>
+      <div class="personality-card">
+        <span class="personality-card-emoji">📸</span>
+        <h3>Photography</h3>
+        <p>I shoot film and digital — mostly street and still life. Photography and design share the same muscle: knowing what to include and what to leave out.</p>
+      </div>
+      <div class="personality-card">
+        <span class="personality-card-emoji">🧶</span>
+        <h3>Crochet maker</h3>
+        <p>I run a small crochet business, tripplecrochet. Pattern-following is surprisingly similar to design systems thinking — modular, rule-bound, but with room for personality.</p>
+      </div>
+      <div class="personality-card">
+        <span class="personality-card-emoji">✏️</span>
+        <h3>Hand-drawn everything</h3>
+        <p>I sketch before I wireframe. There's something about a wobbly line that commits to nothing — the best state for early-stage ideas.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESIGN PHILOSOPHY -->
+  <section class="philosophy-section fade-up">
+    <h2>How I think about design</h2>
+    <div class="philosophy-items">
+      <div class="philosophy-item">
+        <span class="philosophy-label">On research</span>
+        <p class="philosophy-text"><strong>I never design for assumptions.</strong> The most important design work happens before the canvas opens — in interviews, in observations, in understanding why people do what they do, not what they say they do.</p>
+      </div>
+      <div class="philosophy-item">
+        <span class="philosophy-label">On simplicity</span>
+        <p class="philosophy-text"><strong>Clarity is the hardest thing to design.</strong> Anyone can add features. The discipline is knowing what to cut — what serves the user's actual goal versus what serves the product's internal complexity.</p>
+      </div>
+      <div class="philosophy-item">
+        <span class="philosophy-label">On systems</span>
+        <p class="philosophy-text"><strong>Good design is invisible.</strong> When the system is well-built, users don't notice the design — they just accomplish what they came to do. That invisibility is the goal, not a failure.</p>
+      </div>
+      <div class="philosophy-item">
+        <span class="philosophy-label">On impact</span>
+        <p class="philosophy-text"><strong>I'm drawn to problems that matter.</strong> Not every project needs to change the world. But when a design decision could meaningfully improve someone's safety, access, or daily life — that's where I bring my full attention.</p>
+      </div>
+      <div class="philosophy-item">
+        <span class="philosophy-label">On craft</span>
+        <p class="philosophy-text"><strong>The details are the design.</strong> Pixel-perfect spacing isn't vanity — it communicates care. Users may not consciously notice the 8px instead of 12px, but they feel the difference.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CURRENTLY -->
+  <section class="currently-section fade-up">
+    <h2>Currently</h2>
+    <div class="currently-grid">
+      <div class="currently-item">
+        <span class="currently-item-label">Working at</span>
+        <div class="currently-item-value">PharmEasy · Product Design Intern</div>
+      </div>
+      <div class="currently-item">
+        <span class="currently-item-label">Studying</span>
+        <div class="currently-item-value">MS HCI · University of Maryland · graduating 2028</div>
+      </div>
+      <div class="currently-item">
+        <span class="currently-item-label">Based in</span>
+        <div class="currently-item-value">College Park, Maryland, USA</div>
+      </div>
+      <div class="currently-item">
+        <span class="currently-item-label">Looking for</span>
+        <div class="currently-item-value">Summer 2027 internship · US-based</div>
+      </div>
+      <div class="currently-item">
+        <span class="currently-item-label">Reading</span>
+        <div class="currently-item-value">The Design of Everyday Things — Don Norman</div>
+      </div>
+      <div class="currently-item">
+        <span class="currently-item-label">Making</span>
+        <div class="currently-item-value">A new crochet pattern 🧶</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT CTA -->
+  <div style="text-align:center;padding:56px 0 32px;border-top:1.5px solid var(--faint);" class="fade-up">
+    <span style="font-family:var(--font-hand);font-size:1.8rem;display:block;margin-bottom:12px;">Let's build something good.</span>
+    <p style="color:var(--mid);max-width:400px;margin:0 auto 24px;font-size:0.9rem;">If you're building a product that helps people, or an internship team that values research-driven design — I'd love to hear from you.</p>
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+      <a href="mailto:vihanagarkatti@gmail.com" class="btn btn-accent">Say hello →</a>
+      <a href="projects.html" class="btn">See my work</a>
+    </div>
+  </div>
+
+</div><!-- /page -->
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-left">Viha Nagarkatti 🛒</div>
+    <ul class="footer-links">
+      <li><a href="https://www.linkedin.com/in/viha-nagarkatti-382a371a8" target="_blank">LinkedIn</a></li>
+      <li><a href="mailto:vihanagarkatti@gmail.com">Email</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="work.html">Experience</a></li>
+    </ul>
+  </div>
+</footer>
+
+<div class="chat-announce" id="chatAnnounce"><button class="announce-dismiss" id="announceDismiss">✕</button><span class="announce-headline">🍶 About Viha</span><p class="announce-body">Any questions about who she is?</p><button class="announce-cta" id="announceCta">ask us →</button></div>
+<button class="chat-toggle" id="chatToggle">🛒</button>
+<div class="chat-panel" id="chatPanel"><div class="chat-header"><span class="chat-header-icon">🧾</span><span>Store Assistant</span><button class="chat-close" id="chatClose">✕</button></div><div class="chat-messages" id="chatMessages"></div><div class="chat-input-row"><input class="chat-input" id="chatInput" type="text" placeholder="type something…" autocomplete="off" /><button class="chat-send" id="chatSend">↑</button></div></div>
+
+<script src="main.js"></script>
+</body>
+</html>

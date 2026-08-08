@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Viha Nagarkatti — Product Designer</title>
+  <meta name="description" content="Viha Nagarkatti is a product designer based in Bengaluru, seeking Summer 2027 internships at Google, Meta, Figma and more." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ── HOMEPAGE-SPECIFIC STYLES ── */
+    :root {
+      --ink:       #1a1208;
+      --paper:     #faf8f3;
+      --accent:    #d4380d;
+      --faint:     rgba(26,18,8,0.12);
+      --shelf-bg:  #f0ece3;
+      --mid:       rgba(26,18,8,0.45);
+    }
+
+    body { cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Ccircle cx='4' cy='4' r='3' fill='none' stroke='%231a1208' stroke-width='1.5'/%3E%3Cline x1='6.5' y1='6.5' x2='18' y2='18' stroke='%231a1208' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E") 0 0, auto; }
+
+    .store-wrapper { max-width: 960px; margin: 0 auto; padding: 36px 24px 60px; }
+
+    /* HEADER */
+    .store-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 42px;
+    }
+    .store-title .name-line {
+      font-family: 'Caveat', cursive;
+      font-weight: 500;
+      font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+      letter-spacing: .04em;
+      display: block;
+    }
+    .store-title .store-line {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: clamp(1.6rem, 4.5vw, 3rem);
+      letter-spacing: .01em;
+      text-transform: uppercase;
+      display: block;
+      transform: rotate(-0.6deg);
+    }
+    .open-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: .82rem;
+      font-weight: 500;
+      border: 1.5px solid var(--ink);
+      padding: 4px 12px 4px 8px;
+      border-radius: 999px;
+      transform: rotate(-2.5deg);
+      margin-top: 10px;
+    }
+    .open-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); animation: blink 2s ease-in-out infinite; }
+    @keyframes blink { 0%,100%{ opacity:1 } 50%{ opacity:.3 } }
+
+    /* STORE DOOR SVG */
+    .store-door { width: 90px; flex-shrink: 0; margin-top: -4px; }
+
+    /* ── NAV STRIP ── */
+    .store-nav {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+    }
+    .store-nav a {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      color: var(--ink);
+      padding: 6px 16px;
+      border: 1.5px solid rgba(26,18,8,0.35);
+      border-radius: 999px;
+      transition: all .15s;
+      opacity: 0.85;
+    }
+    .store-nav a:hover { border-color: var(--ink); color: var(--ink); background: var(--shelf-bg); opacity: 1; }
+
+    /* SHELF */
+    .shelf-unit {
+      position: relative;
+      border: 2px solid var(--ink);
+      border-radius: 3px;
+      background: var(--paper);
+      transform: perspective(900px) rotateX(1deg);
+      transform-origin: center bottom;
+    }
+    .shelf-plank {
+      display: flex;
+      align-items: flex-end;
+      gap: 14px;
+      padding: 18px 20px 12px;
+      position: relative;
+    }
+    .shelf-plank::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 6px; right: 6px;
+      height: 5px;
+      background: var(--ink);
+      border-radius: 2px;
+      clip-path: polygon(0 0, 100% 0, 99% 100%, 1% 100%);
+    }
+    .shelf-plank:last-child::after { display: none; }
+    .shelf-unit::before {
+      content: '';
+      position: absolute;
+      top: 0; bottom: 5px; left: 0; right: 0;
+      border-left: 4px solid var(--ink);
+      border-right: 4px solid var(--ink);
+      pointer-events: none;
+      border-radius: 3px;
+    }
+    .shelf-floor {
+      height: 22px;
+      background: var(--shelf-bg);
+      border-top: 2px solid var(--ink);
+      border-radius: 0 0 2px 2px;
+      background-image: repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(26,18,8,.08) 40px, rgba(26,18,8,.08) 41px);
+    }
+
+    /* PRODUCTS */
+    .product {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: var(--ink);
+      cursor: pointer;
+      transition: transform .18s ease, filter .18s ease;
+      position: relative;
+      flex-shrink: 0;
+    }
+    .product:hover { transform: translateY(-8px) scale(1.04); filter: drop-shadow(0 6px 10px rgba(26,18,8,.18)); }
+    .product-label {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 600;
+      font-size: .82rem;
+      text-align: center;
+      margin-top: 6px;
+      max-width: 90px;
+      line-height: 1.1;
+    }
+    .product-label.accent { color: var(--accent); }
+    .product-label.faint  { opacity: .28; font-size: .75rem; }
+    .sticker {
+      position: absolute;
+      top: -6px; right: -8px;
+      background: var(--accent);
+      color: #fff;
+      font-size: .62rem;
+      font-weight: 700;
+      padding: 3px 6px;
+      border-radius: 50%;
+      transform: rotate(12deg);
+      line-height: 1;
+      pointer-events: none;
+      font-family: 'DM Sans', sans-serif;
+    }
+    .row-sign {
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      transform: rotate(180deg);
+      font-size: .7rem;
+      font-family: 'DM Mono', monospace;
+      color: var(--ink);
+      opacity: .35;
+      letter-spacing: .12em;
+      padding: 4px 6px;
+      align-self: center;
+      flex-shrink: 0;
+      user-select: none;
+    }
+    .sketch-img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+      mix-blend-mode: multiply;
+    }
+    .sketch-placeholder {
+      border: 1.5px dashed rgba(26,18,8,0.22);
+      border-radius: 4px;
+      color: rgba(26,18,8,0.28);
+      font-family: 'Caveat', cursive;
+      font-size: .68rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 4px;
+      background: repeating-linear-gradient(45deg, transparent, transparent 6px, rgba(26,18,8,.025) 6px, rgba(26,18,8,.025) 12px);
+    }
+    .tin-small:hover { transform: translateY(-4px) scale(1.03); }
+
+    /* SPECIALS SECTION */
+    .specials-section { margin-top: 0; }
+    .specials-heading {
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+    .specials-heading h2 {
+      font-family: 'Caveat', cursive;
+      font-weight: 700;
+      font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+      transform: rotate(-0.5deg);
+      display: inline-block;
+    }
+    .specials-heading .chalkboard {
+      font-family: 'DM Mono', monospace;
+      font-size: .78rem;
+      background: var(--ink);
+      color: var(--paper);
+      padding: 3px 10px;
+      border-radius: 2px;
+      letter-spacing: .06em;
+      transform: rotate(0.8deg);
+      display: inline-block;
+      white-space: nowrap;
+    }
+
+    .bento-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      grid-template-rows: 240px 200px;
+      gap: 14px;
+    }
+    .bento-card {
+      position: relative;
+      border: 2px solid var(--ink);
+      border-radius: 3px;
+      background: var(--paper);
+      overflow: hidden;
+      cursor: pointer;
+      text-decoration: none;
+      color: var(--ink);
+      display: flex;
+      flex-direction: column;
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+    .bento-card:hover { transform: translate(-3px, -3px); box-shadow: 5px 5px 0 var(--ink); }
+    .bento-card.tall { grid-row: span 2; }
+    .bento-img {
+      flex: 1;
+      overflow: hidden;
+      position: relative;
+      background: var(--shelf-bg);
+    }
+    .bento-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .3s ease; }
+    .bento-card:hover .bento-img img { transform: scale(1.03); }
+    .bento-body {
+      padding: 12px 14px 14px;
+      border-top: 1.5px solid var(--ink);
+      flex-shrink: 0;
+    }
+    .bento-category { font-family: 'DM Mono', monospace; font-size: .68rem; opacity: .42; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 3px; }
+    .bento-title { font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: clamp(.9rem, 1.5vw, 1.05rem); line-height: 1.2; margin-bottom: 4px; }
+    .bento-desc { font-size: .78rem; opacity: .52; line-height: 1.4; font-family: 'DM Sans', sans-serif; }
+    .bento-arrow { display: inline-block; margin-top: 6px; font-size: .78rem; opacity: 0; transform: translateX(-4px); transition: opacity .18s ease, transform .18s ease; font-family: 'DM Sans', sans-serif; }
+    .bento-card:hover .bento-arrow { opacity: .6; transform: translateX(0); }
+    .bento-tag {
+      position: absolute;
+      z-index: 2;
+      top: 10px; left: 10px;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: .68rem;
+      letter-spacing: 0.04em;
+      line-height: 1;
+      padding: 4px 9px;
+      border: 1.5px solid var(--ink);
+      border-radius: 2px;
+    }
+    .tag-special   { background: var(--accent); color: #fff; border-color: var(--accent); transform: rotate(-2.5deg); }
+    .tag-bestseller{ background: var(--ink); color: var(--paper); transform: rotate(1.8deg); }
+    .tag-fresh     { background: var(--paper); color: var(--ink); transform: rotate(-1.2deg); }
+    .tag-limited   { background: var(--shelf-bg); color: var(--ink); border-style: dashed; transform: rotate(2deg); }
+
+    /* WORK EXPERIENCE STRIP */
+    .exp-section { margin-top: 72px; }
+    .exp-list { display: flex; flex-direction: column; gap: 16px; margin-top: 24px; }
+    .exp-item {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: start;
+      gap: 20px;
+      padding: 20px 24px;
+      border: 1.5px solid var(--faint);
+      border-radius: 4px;
+      background: var(--paper);
+      transition: border-color .18s, transform .18s;
+    }
+    .exp-item:hover { border-color: var(--ink); transform: translateX(4px); }
+    .exp-icon {
+      width: 40px; height: 40px;
+      border: 1.5px solid var(--faint);
+      border-radius: 6px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.2rem;
+      background: var(--shelf-bg);
+      flex-shrink: 0;
+    }
+    .exp-company { font-weight: 700; font-size: 0.95rem; margin-bottom: 2px; font-family: 'DM Sans', sans-serif; }
+    .exp-role { font-size: 0.82rem; color: var(--mid); font-family: 'DM Sans', sans-serif; }
+    .exp-period { font-family: 'DM Mono', monospace; font-size: 0.72rem; color: var(--mid); white-space: nowrap; }
+
+    @media (max-width: 600px) {
+      .store-header { flex-direction: column; gap: 12px; }
+      .store-door { display: none; }
+      .shelf-plank { gap: 8px; padding: 14px 10px 10px; }
+      .bento-grid { grid-template-columns: 1fr; grid-template-rows: auto; }
+      .bento-card.tall { grid-row: span 1; }
+      .bento-img { height: 200px; flex: none; }
+      .exp-item { grid-template-columns: 1fr; }
+      .exp-period { text-align: left; }
+    }
+  </style>
+</head>
+<body>
+
+<main class="store-wrapper">
+
+  <!-- ══ HEADER ══ -->
+  <header class="store-header">
+    <div class="store-title">
+      <span class="name-line">Viha Nagarkatti's</span>
+      <span class="store-line">Grocery Store</span>
+      <div>
+        <span class="open-badge">
+          <span class="open-dot"></span>
+          open for Summer 2027 internships
+        </span>
+      </div>
+    </div>
+
+    <!-- Hand-drawn door — add your sketch as sketches/door.png -->
+    <div class="store-door" aria-hidden="true">
+      <svg viewBox="0 0 90 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="4" y="6" width="82" height="70" rx="2" stroke="#1a1208" stroke-width="2"/>
+        <rect x="8" y="10" width="35" height="62" rx="1" stroke="#1a1208" stroke-width="1.5"/>
+        <rect x="47" y="10" width="35" height="62" rx="1" stroke="#1a1208" stroke-width="1.5"/>
+        <circle cx="42" cy="42" r="2.5" fill="#1a1208"/>
+        <circle cx="50" cy="42" r="2.5" fill="#1a1208"/>
+        <line x1="25" y1="10" x2="25" y2="72" stroke="#1a1208" stroke-width="1" opacity="0.3"/>
+        <line x1="68" y1="10" x2="68" y2="72" stroke="#1a1208" stroke-width="1" opacity="0.3"/>
+        <text x="46" y="5" font-family="DM Sans" font-size="5" fill="#1a1208" text-anchor="middle" opacity="0.4">OPEN</text>
+      </svg>
+    </div>
+  </header>
+
+  <!-- ══ STORE NAV ── -->
+  <nav class="store-nav" aria-label="Store sections">
+    <a href="index.html">🏠 Home</a>
+    <a href="projects.html">🫙 Projects</a>
+    <a href="work.html">🥫 Work Experience</a>
+    <a href="about.html">🍶 About Me</a>
+    <a href="mailto:vihanagarkatti@gmail.com">📬 Contact</a>
+  </nav>
+
+  <!-- ══ FEATURED PROJECTS (BENTO GRID) ══ -->
+  <section class="specials-section">
+    <div class="specials-heading">
+      <h2>Today's Specials</h2>
+      <span class="chalkboard">FEATURED PROJECTS</span>
+    </div>
+
+    <div class="bento-grid">
+
+      <!-- AASHRAY — tall card -->
+      <a href="aashray.html" class="bento-card tall" aria-label="View project: Aashray safety app">
+        <span class="bento-tag tag-special">Social Impact</span>
+        <div class="bento-img" style="background:#0d1117; display:flex; align-items:center; justify-content:center; padding:20px;">
+          <svg viewBox="0 0 260 380" xmlns="http://www.w3.org/2000/svg" style="max-width:200px;height:100%;">
+            <rect x="20" y="10" width="220" height="360" rx="24" fill="#12141c" stroke="#F0997B" stroke-width="1"/>
+            <rect x="20" y="10" width="220" height="44" rx="24" fill="#1a1a26"/>
+            <rect x="20" y="40" width="220" height="14" fill="#1a1a26"/>
+            <text x="130" y="36" font-family="DM Sans" font-size="11" fill="#F0997B" text-anchor="middle" font-weight="700">AASHRAY</text>
+            <circle cx="130" cy="85" r="22" fill="#F0997B" opacity=".15"/>
+            <text x="130" y="91" font-family="DM Sans" font-size="18" text-anchor="middle">🛡️</text>
+            <text x="130" y="116" font-family="DM Sans" font-size="8" fill="rgba(240,153,123,0.7)" text-anchor="middle">You are safe here</text>
+            <rect x="34" y="130" width="192" height="44" rx="10" fill="#1a1a26" stroke="rgba(240,153,123,0.2)" stroke-width="1"/>
+            <text x="130" y="150" font-family="DM Sans" font-size="8" fill="#F0997B" text-anchor="middle" font-weight="600">🏠 Find shelter near you</text>
+            <text x="130" y="165" font-family="DM Sans" font-size="7" fill="rgba(240,153,123,0.4)" text-anchor="middle">12 verified shelters within 5km</text>
+            <rect x="34" y="182" width="192" height="44" rx="10" fill="#1a1a26" stroke="rgba(240,153,123,0.2)" stroke-width="1"/>
+            <text x="130" y="202" font-family="DM Sans" font-size="8" fill="#F0997B" text-anchor="middle" font-weight="600">⚖️ Free legal consultation</text>
+            <text x="130" y="217" font-family="DM Sans" font-size="7" fill="rgba(240,153,123,0.4)" text-anchor="middle">Connect with a lawyer — no cost</text>
+            <rect x="34" y="234" width="192" height="44" rx="10" fill="#1a1a26" stroke="rgba(240,153,123,0.2)" stroke-width="1"/>
+            <text x="130" y="254" font-family="DM Sans" font-size="8" fill="#F0997B" text-anchor="middle" font-weight="600">💰 Financial assistance</text>
+            <text x="130" y="269" font-family="DM Sans" font-size="7" fill="rgba(240,153,123,0.4)" text-anchor="middle">Govt. schemes matched to you</text>
+            <rect x="34" y="292" width="192" height="44" rx="10" fill="#1a1a26" stroke="rgba(240,153,123,0.3)" stroke-width="1"/>
+            <text x="130" y="316" font-family="DM Sans" font-size="9" fill="#F0997B" text-anchor="middle" font-weight="700">QUICK EXIT</text>
+            <text x="130" y="330" font-family="DM Sans" font-size="7" fill="rgba(240,153,123,0.35)" text-anchor="middle">Tap to leave. No trace left.</text>
+          </svg>
+        </div>
+        <div class="bento-body">
+          <p class="bento-category">Social Impact · Research-led Design</p>
+          <p class="bento-title">Aashray — Safety App for DV Survivors</p>
+          <p class="bento-desc">Designed around why victims stay, not just when they leave. Shelter, legal aid, financial schemes, and SOS — one discreet app.</p>
+          <span class="bento-arrow">View case study →</span>
+        </div>
+      </a>
+
+      <!-- ARA Solo Travel -->
+      <a href="ara.html" class="bento-card" aria-label="View project: Ara solo travel">
+        <span class="bento-tag tag-bestseller">Published Research</span>
+        <div class="bento-img" style="background:#EEE9FF; display:flex; align-items:center; justify-content:center; padding:14px;">
+          <svg viewBox="0 0 260 180" xmlns="http://www.w3.org/2000/svg" style="max-width:240px;">
+            <rect x="10" y="8" width="110" height="164" rx="18" fill="white" stroke="#6C5CE7" stroke-width="1.5"/>
+            <rect x="10" y="8" width="110" height="28" rx="18" fill="#6C5CE7"/>
+            <rect x="10" y="28" width="110" height="8" fill="#6C5CE7"/>
+            <text x="65" y="25" font-family="DM Sans" font-size="9" fill="white" text-anchor="middle" font-weight="700">Ara</text>
+            <rect x="22" y="42" width="86" height="76" rx="10" fill="#8B7CF0" opacity=".18"/>
+            <text x="32" y="58" font-family="DM Sans" font-size="7" fill="#4A3DB5" font-weight="600">SOLO PICKS</text>
+            <text x="32" y="76" font-family="DM Sans" font-size="13" fill="#4A3DB5" font-weight="700">Kyoto</text>
+            <rect x="52" y="96" width="52" height="14" rx="7" fill="#00B894"/>
+            <text x="78" y="106" font-family="DM Sans" font-size="7" fill="white" text-anchor="middle">✓ Safe Zone</text>
+            <rect x="22" y="118" width="38" height="34" rx="8" fill="#FFF0EB"/>
+            <text x="41" y="139" font-family="DM Sans" font-size="8" fill="#FF7043" text-anchor="middle" font-weight="700">SOS</text>
+            <rect x="66" y="118" width="42" height="34" rx="8" fill="#EEE9FF"/>
+            <text x="87" y="139" font-family="DM Sans" font-size="7" fill="#6C5CE7" text-anchor="middle">Meet</text>
+            <rect x="140" y="8" width="110" height="164" rx="18" fill="white" stroke="#6C5CE7" stroke-width="1.5"/>
+            <rect x="140" y="8" width="110" height="28" rx="18" fill="#6C5CE7"/>
+            <rect x="140" y="28" width="110" height="8" fill="#6C5CE7"/>
+            <text x="195" y="25" font-family="DM Sans" font-size="9" fill="white" text-anchor="middle" font-weight="700">Safety Map</text>
+            <rect x="152" y="44" width="86" height="90" rx="8" fill="#E8E5FF"/>
+            <circle cx="195" cy="89" r="8" fill="#6C5CE7"/>
+            <circle cx="195" cy="89" r="14" fill="#6C5CE7" opacity=".18"/>
+            <rect x="152" y="144" width="86" height="22" rx="8" fill="#F5F3FF"/>
+            <text x="195" y="158" font-family="DM Sans" font-size="7" fill="#6C5CE7" text-anchor="middle">Alerts off in safe zone</text>
+          </svg>
+        </div>
+        <div class="bento-body">
+          <p class="bento-category">UX Design · Mobile</p>
+          <p class="bento-title">Ara: Solo Travel Safety App</p>
+          <p class="bento-desc">Offline SOS + real-time alerts for solo women travellers. No competitor offered both. Research published at Springer.</p>
+          <span class="bento-arrow">Read case study →</span>
+        </div>
+      </a>
+
+      <!-- TECHIE Chatbot -->
+      <a href="techie.html" class="bento-card" aria-label="View project: Techie chatbot">
+        <span class="bento-tag tag-fresh">Springer · Cambridge</span>
+        <div class="bento-img" style="background:#0e0e0e; display:flex; align-items:center; justify-content:center; padding:14px;">
+          <svg viewBox="0 0 260 150" xmlns="http://www.w3.org/2000/svg" style="max-width:240px;">
+            <rect x="10" y="8" width="240" height="134" rx="12" fill="#161616" stroke="#2a2a2a" stroke-width="1"/>
+            <rect x="22" y="20" width="120" height="22" rx="6" fill="#1e1e1e" stroke="#2a2a2a" stroke-width="1"/>
+            <text x="82" y="34" font-family="DM Sans" font-size="7.5" fill="#f0ede8" text-anchor="middle">Compare OLED TVs under 50k?</text>
+            <rect x="128" y="50" width="120" height="22" rx="11" fill="#1c2a0e"/>
+            <text x="188" y="64" font-family="DM Sans" font-size="7.5" fill="#c8f07c" text-anchor="middle">Sure! Found 3 great options</text>
+            <rect x="22" y="82" width="216" height="48" rx="8" fill="#1e1e1e" stroke="#2a2a2a" stroke-width="1"/>
+            <rect x="32" y="90" width="40" height="30" rx="5" fill="#0e1e33"/>
+            <text x="52" y="110" font-family="DM Sans" font-size="11" fill="#6da8e8" text-anchor="middle">📺</text>
+            <text x="88" y="100" font-family="DM Sans" font-size="8" fill="#f0ede8" font-weight="600">Sony Bravia X80L</text>
+            <text x="88" y="112" font-family="DM Sans" font-size="6.5" fill="#888">55" 4K OLED · ₹44,990</text>
+            <rect x="84" y="118" width="40" height="10" rx="5" fill="#1c2a0e"/>
+            <text x="104" y="125" font-family="DM Sans" font-size="6" fill="#c8f07c" text-anchor="middle">Best pick</text>
+          </svg>
+        </div>
+        <div class="bento-body">
+          <p class="bento-category">Conversational UI · Research</p>
+          <p class="bento-title">Techie: Retail Chatbot</p>
+          <p class="bento-desc">QR-triggered in-store assistant that cuts through spec overload. Published in Springer, presented at Cambridge.</p>
+          <span class="bento-arrow">Explore →</span>
+        </div>
+      </a>
+
+    </div>
+    <!-- See all projects link -->
+    <div style="text-align:right;margin-top:16px;">
+      <a href="projects.html" class="btn">See all 5 projects →</a>
+    </div>
+  </section>
+
+  <!-- ══ WORK EXPERIENCE STRIP ══ -->
+  <section class="exp-section">
+    <div class="specials-heading">
+      <h2>Work Experience</h2>
+      <span class="chalkboard">AISLE 03</span>
+    </div>
+    <div class="exp-list">
+      <div class="exp-item">
+        <div class="exp-icon">💊</div>
+        <div>
+          <div class="exp-company">PharmEasy</div>
+          <div class="exp-role">Product Design Intern · User research, usability testing, responsive design across age groups, design system contributions</div>
+        </div>
+        <div class="exp-period">Jan 2025 – Present</div>
+      </div>
+      <div class="exp-item">
+        <div class="exp-icon">🔬</div>
+        <div>
+          <div class="exp-company">Indian Institute of Science (IISc), Bengaluru</div>
+          <div class="exp-role">Design Intern under Dr. Vishal Singh · Visual storytelling, layout design, content curation for Silver Jubilee coffee table book</div>
+        </div>
+        <div class="exp-period">Oct 2024 – Mar 2025</div>
+      </div>
+      <div class="exp-item">
+        <div class="exp-icon">🏅</div>
+        <div>
+          <div class="exp-company">Nuava</div>
+          <div class="exp-role">UX Intern · Designed web app for school sports coaches — fixture management, tournament tracking, student performance dashboards</div>
+        </div>
+        <div class="exp-period">Jun 2023 – Jul 2023</div>
+      </div>
+    </div>
+    <div style="text-align:right;margin-top:16px;">
+      <a href="work.html" class="btn">Full work history →</a>
+    </div>
+  </section>
+
+  <!-- ══ BOTTOM TICKER ══ -->
+  <div class="ticker-wrap" style="margin-top:60px;" aria-hidden="true">
+    <div class="ticker-track">
+      <span>HCI Master's · University of Maryland</span><span>✦</span>
+      <span>Seeking Summer 2027 Internship · US</span><span>✦</span>
+      <span>Human-Centred Design</span><span>✦</span>
+      <span>Published Researcher</span><span>✦</span>
+      <span>Figma · Adobe · Framer</span><span>✦</span>
+      <span>Product Designer</span><span>✦</span>
+      <span>HCI Master's · University of Maryland</span><span>✦</span>
+      <span>Seeking Summer 2027 Internship · US</span><span>✦</span>
+      <span>Human-Centred Design</span><span>✦</span>
+      <span>Published Researcher</span><span>✦</span>
+      <span>Figma · Adobe · Framer</span><span>✦</span>
+    </div>
+  </div>
+
+</main>
+
+<!-- ══ FOOTER ══ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-left">Viha Nagarkatti 🛒</div>
+    <ul class="footer-links">
+      <li><a href="https://www.linkedin.com/in/viha-nagarkatti-382a371a8" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="mailto:vihanagarkatti@gmail.com">Email</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </div>
+</footer>
+
+<!-- ══ CHAT BOT ══ -->
+<div class="chat-announce" id="chatAnnounce">
+  <button class="announce-dismiss" id="announceDismiss" aria-label="Dismiss">✕</button>
+  <span class="announce-headline">📢 Hey, recruiter!</span>
+  <p class="announce-body">Lost? Curious? Ask our store assistant anything about Viha.</p>
+  <button class="announce-cta" id="announceCta">ask us anything →</button>
+</div>
+<button class="chat-toggle" id="chatToggle" aria-label="Open chat">🛒</button>
+<div class="chat-panel" id="chatPanel" role="dialog" aria-label="Store assistant">
+  <div class="chat-header">
+    <span class="chat-header-icon">🧾</span>
+    <span>Store Assistant</span>
+    <button class="chat-close" id="chatClose" aria-label="Close">✕</button>
+  </div>
+  <div class="chat-messages" id="chatMessages"></div>
+  <div class="chat-input-row">
+    <input class="chat-input" id="chatInput" type="text" placeholder="type something…" autocomplete="off" />
+    <button class="chat-send" id="chatSend" aria-label="Send">↑</button>
+  </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

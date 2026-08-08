@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nuava — Viha Nagarkatti</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    :root { --exp-accent: #D4380D; --exp-bg: #FBEAE3; }
+    .contribution-block { margin-bottom: 52px; }
+    .contribution-num { font-family: var(--font-mono); font-size: 0.72rem; color: var(--exp-accent); letter-spacing: 0.1em; text-transform: uppercase; display: block; margin-bottom: 6px; }
+    .contribution-block > p { color: rgba(26,18,8,0.72); font-size: 0.95rem; line-height: 1.7; margin-bottom: 20px; }
+    .sub-contribution { border-left: 2px solid var(--faint); padding-left: 20px; margin: 20px 0; }
+    .sub-contribution h4 { font-size: 0.9rem; font-weight: 700; margin-bottom: 6px; }
+    .sub-contribution p { font-size: 0.88rem; color: rgba(26,18,8,0.68); line-height: 1.65; margin: 0; }
+    .sub-contribution + .sub-contribution { margin-top: 18px; }
+    .impact-callout { background: var(--exp-bg); border: 1.5px solid rgba(212,56,13,0.2); border-radius: 6px; padding: 20px 24px; margin: 24px 0; }
+    .impact-callout-label { font-family: var(--font-mono); font-size: 0.68rem; color: var(--exp-accent); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; display: block; }
+    .impact-callout p { font-size: 0.88rem; color: rgba(26,18,8,0.72); margin: 0; line-height: 1.6; }
+    .learnings-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-top: 24px; }
+    .learning-card { padding: 18px 20px; border: 1.5px solid var(--faint); border-radius: 6px; background: var(--paper); }
+    .learning-card-icon { font-size: 1.3rem; display: block; margin-bottom: 8px; }
+    .learning-card h4 { font-size: 0.85rem; font-weight: 700; margin-bottom: 6px; }
+    .learning-card p { font-size: 0.8rem; color: var(--mid); margin: 0; line-height: 1.5; }
+    .placeholder-block { background: var(--shelf-bg); border: 1.5px dashed rgba(26,18,8,.18); border-radius: 6px; padding: 32px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; text-align: center; margin: 20px 0; min-height: 180px; }
+    .placeholder-block p { font-size: 0.78rem; color: rgba(26,18,8,.35); margin: 0; }
+    .placeholder-block code { font-size: 0.72rem; color: rgba(26,18,8,.45); background: var(--faint); padding: 4px 10px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><span class="nav-logo-dot"></span>Viha's Store</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="work.html" class="active">Experience</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="mailto:vihanagarkatti@gmail.com" class="nav-cta">Say hello 👋</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page">
+  <a href="work.html" class="back-link">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    Back to experience
+  </a>
+
+  <header class="cs-hero fade-up">
+    <div class="cs-meta">
+      <span class="tag tag-grocery">UX Design Intern</span>
+      <span class="tag tag-outline">Sports Tech</span>
+      <span class="tag tag-soft">0 → 1 Product</span>
+      <span class="tag tag-soft">Web App</span>
+    </div>
+    <h1 class="cs-title">Nuava</h1>
+    <p class="cs-subtitle">Designed a 0→1 web app helping school sports coaches manage fixtures, tournaments, and student performance — replacing fragmented spreadsheet and WhatsApp workflows with a purpose-built, intuitive product.</p>
+
+    <div class="cs-stats">
+      <div class="cs-stat"><span class="cs-stat-num">3</span><span class="cs-stat-label">core modules designed: fixtures, tournaments, performance</span></div>
+      <div class="cs-stat"><span class="cs-stat-num">2</span><span class="cs-stat-label">platforms benchmarked: PlayHQ and SportEasy</span></div>
+      <div class="cs-stat"><span class="cs-stat-num">0→1</span><span class="cs-stat-label">greenfield product — from blank canvas to engineering handoff</span></div>
+      <div class="cs-stat"><span class="cs-stat-num">2 mo</span><span class="cs-stat-label">internship · June – July 2023</span></div>
+    </div>
+
+    <div class="cs-img-block" style="background:#FBEAE3;">
+      <div style="padding:28px 24px;display:flex;gap:20px;align-items:center;flex-wrap:wrap;">
+        <div style="flex:1;min-width:220px;">
+          <p style="font-family:var(--font-mono);font-size:0.68rem;color:#D4380D;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:8px;">About the project</p>
+          <p style="font-size:0.88rem;color:rgba(26,18,8,0.7);line-height:1.6;margin:0;">Nuava set out to digitise school sports management — a space dominated by spreadsheets, WhatsApp groups, and physical notice boards. The product needed to serve coaches who were experts in sport, not software — usability was the central design constraint from day one.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px;flex-shrink:0;">
+          <div style="padding:10px 16px;background:white;border-radius:6px;border:1px solid rgba(212,56,13,0.2);"><div style="font-family:var(--font-mono);font-size:0.65rem;color:rgba(26,18,8,0.4);margin-bottom:2px;">SECTOR</div><div style="font-size:0.82rem;font-weight:600;">Sports Tech · B2B SaaS</div></div>
+          <div style="padding:10px 16px;background:white;border-radius:6px;border:1px solid rgba(212,56,13,0.2);"><div style="font-family:var(--font-mono);font-size:0.65rem;color:rgba(26,18,8,0.4);margin-bottom:2px;">USERS</div><div style="font-size:0.82rem;font-weight:600;">School sports coaches</div></div>
+          <div style="padding:10px 16px;background:white;border-radius:6px;border:1px solid rgba(212,56,13,0.2);"><div style="font-family:var(--font-mono);font-size:0.65rem;color:rgba(26,18,8,0.4);margin-bottom:2px;">PLATFORM</div><div style="font-size:0.82rem;font-weight:600;">Web app</div></div>
+        </div>
+      </div>
+      <p class="cs-img-caption">Nuava · UX Design Intern · June 2023 – July 2023</p>
+    </div>
+  </header>
+
+  <div class="cs-body">
+
+    <div class="contribution-block fade-up">
+      <span class="contribution-num">Contribution 01</span>
+      <h2>Competitive Analysis & Feature Prioritisation</h2>
+      <p>Before designing anything, I researched how established sports management platforms approached the same problem — looking for patterns worth adopting and gaps worth filling.</p>
+
+      <div class="sub-contribution">
+        <h4>Benchmarking PlayHQ and SportEasy</h4>
+        <p>Conducted competitor analysis of established sports management platforms to understand standard feature sets, navigation patterns, and friction points. Research directly informed which features to prioritise for Nuava's initial release — focusing on fixture scheduling and tournament tracking as the highest-value workflows.</p>
+      </div>
+      <div class="sub-contribution">
+        <h4>Avoiding feature traps</h4>
+        <p>The competitive audit revealed which features competitors had built that users found unnecessarily complex. Nuava's first release scope was deliberately narrower — better to do three things excellently than ten things adequately.</p>
+      </div>
+
+      <div class="impact-callout">
+        <span class="impact-callout-label">Impact</span>
+        <p>Competitor research shaped the first-release scope, helping the team avoid rebuilding feature sets users already found complex elsewhere — a direct contribution to product strategy, not just design execution.</p>
+      </div>
+    </div>
+
+    <div class="divider" style="margin:40px 0;"></div>
+
+    <div class="contribution-block fade-up">
+      <span class="contribution-num">Contribution 02</span>
+      <h2>Core Product Design — Dashboard & Three Modules</h2>
+      <p>Designed the foundational structure of the coach-facing web app — from the dashboard that would serve as daily home base to the three core feature modules.</p>
+
+      <div class="sub-contribution">
+        <h4>Information-dense dashboard</h4>
+        <p>Designed the core dashboard and navigation patterns — balancing information density (upcoming fixtures, recent results, pending tasks all at a glance) against first-time usability for non-technical coaches who were used to spreadsheets.</p>
+      </div>
+      <div class="sub-contribution">
+        <h4>Fixture scheduling flows</h4>
+        <p>Designed for the common case (quick recurring scheduling) without sacrificing flexibility for edge cases (rescheduling, weather cancellations, multi-team conflicts). Replaced a WhatsApp-and-spreadsheet process with a structured digital flow.</p>
+      </div>
+      <div class="sub-contribution">
+        <h4>Tournament bracket management</h4>
+        <p>Designed the interface for elimination brackets and round-robins — translating visually complex structures into something coaches could set up and update without external tools. Iterated on hierarchy and visual encoding of match results.</p>
+      </div>
+      <div class="sub-contribution">
+        <h4>Student performance tracking</h4>
+        <p>Designed views for tracking individual student development across seasons — useful for team selection decisions and parent communications. Focused on trend-at-a-glance rather than raw data tables.</p>
+      </div>
+
+      <div class="placeholder-block">
+        <span style="font-size:1.6rem;">🏅</span>
+        <p>Add your Nuava screens here</p>
+        <code>assets/nuava-dashboard.png · assets/nuava-fixtures.png · assets/nuava-bracket.png</code>
+      </div>
+
+      <div class="impact-callout">
+        <span class="impact-callout-label">Impact</span>
+        <p>Replaced a fragmented spreadsheet-and-WhatsApp workflow with a single coherent product — designed end-to-end from lo-fi wireframes through hi-fi mockups ready for engineering handoff in a 2-month internship.</p>
+      </div>
+    </div>
+
+    <div class="divider" style="margin:40px 0;"></div>
+
+    <div class="contribution-block fade-up">
+      <span class="contribution-num">Contribution 03</span>
+      <h2>Engineering Collaboration</h2>
+      <p>Worked directly with the engineering team throughout the design process — an early lesson in designing with implementation constraints in mind rather than handing off finished designs cold.</p>
+
+      <div class="sub-contribution">
+        <h4>Feasibility-aware design process</h4>
+        <p>Surfaced feasibility questions early by involving engineers in design reviews rather than handing off at the end. Adjusted designs where needed to fit sprint scope without compromising core usability goals — learning when to push back and when to adapt.</p>
+      </div>
+
+      <div class="impact-callout">
+        <span class="impact-callout-label">What this taught me</span>
+        <p>Designing in close collaboration with engineering produces faster, more realistic outcomes. It also taught me to defend design decisions with user reasoning rather than preference — the only argument that holds in a sprint review.</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="cs-section fade-up">
+      <span class="cs-section-label">Key Learnings</span>
+      <h2>What Nuava taught me</h2>
+      <div class="learnings-grid">
+        <div class="learning-card"><span class="learning-card-icon">🆕</span><h4>Designing 0→1</h4><p>Unlike PharmEasy, there was no existing design system to extend. Greenfield product design taught me how to make foundational decisions that need to scale.</p></div>
+        <div class="learning-card"><span class="learning-card-icon">⚙️</span><h4>Feasibility as a design input</h4><p>Early engineering collaboration reshaped how I approach design — feasibility isn't a constraint to fight, it's information that makes the design better and shippable.</p></div>
+        <div class="learning-card"><span class="learning-card-icon">🧑‍🏫</span><h4>Non-technical domain experts</h4><p>Coaches are domain experts, not software experts. Designing for deep subject-matter expertise paired with low software fluency required real empathy and restraint.</p></div>
+        <div class="learning-card"><span class="learning-card-icon">🔍</span><h4>Research-informed scoping</h4><p>Competitive analysis isn't about copying — it's about understanding what problems are already solved, so effort goes toward genuine gaps instead.</p></div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;padding-bottom:48px;">
+      <a href="exp-digitalindia.html" class="btn">← Digital India Corp</a>
+      <a href="work.html" class="btn btn-filled">All experience →</a>
+    </div>
+
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-left">Viha Nagarkatti 🛒</div>
+    <ul class="footer-links">
+      <li><a href="https://www.linkedin.com/in/viha-nagarkatti-382a371a8" target="_blank">LinkedIn</a></li>
+      <li><a href="mailto:vihanagarkatti@gmail.com">Email</a></li>
+      <li><a href="work.html">Experience</a></li>
+    </ul>
+  </div>
+</footer>
+
+<div class="chat-announce" id="chatAnnounce"><button class="announce-dismiss" id="announceDismiss">✕</button><span class="announce-headline">🏅 Nuava</span><p class="announce-body">Questions about this role?</p><button class="announce-cta" id="announceCta">ask us →</button></div>
+<button class="chat-toggle" id="chatToggle">🛒</button>
+<div class="chat-panel" id="chatPanel"><div class="chat-header"><span class="chat-header-icon">🧾</span><span>Store Assistant</span><button class="chat-close" id="chatClose">✕</button></div><div class="chat-messages" id="chatMessages"></div><div class="chat-input-row"><input class="chat-input" id="chatInput" type="text" placeholder="Ask about this role…" autocomplete="off" /><button class="chat-send" id="chatSend">↑</button></div></div>
+
+<script src="main.js"></script>
+</body>
+</html>

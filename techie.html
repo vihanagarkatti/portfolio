@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Techie — Viha Nagarkatti</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .screen-gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; margin: 24px 0; }
+    .screen-item img { width: 100%; height: auto; display: block; border-radius: 8px; border: 1px solid var(--faint); transition: transform .2s ease, box-shadow .2s ease; }
+    .screen-item img:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(26,18,8,0.12); }
+    .screen-caption { font-size: 0.75rem; color: var(--mid); margin-top: 8px; line-height: 1.4; font-style: italic; }
+    .img-full { margin: 28px 0; border-radius: 8px; overflow: hidden; border: 1px solid var(--faint); }
+    .img-full img { width: 100%; height: auto; display: block; }
+    .img-caption { padding: 10px 16px; font-size: 0.78rem; color: var(--mid); font-style: italic; border-top: 1px solid var(--faint); background: var(--shelf-bg); }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><span class="nav-logo-dot"></span>Viha's Store</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="work.html">Experience</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="mailto:vihanagarkatti@gmail.com" class="nav-cta">Say hello 👋</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page">
+  <a href="projects.html" class="back-link">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    Back to projects
+  </a>
+
+  <header class="cs-hero fade-up">
+    <div class="cs-meta">
+      <span class="tag tag-filled">Springer 2024</span>
+      <span class="tag tag-outline">Conversational UI</span>
+      <span class="tag tag-soft">Cambridge University</span>
+      <span class="tag tag-soft">Retail UX</span>
+    </div>
+    <h1 class="cs-title">Techie — Retail Store Chatbot</h1>
+    <p class="cs-subtitle">A QR-triggered conversational assistant for electronics retail that cuts through spec overload. No app download needed — scan, ask, decide. Published in Springer, presented at Cambridge University.</p>
+
+    <div class="cs-stats">
+      <div class="cs-stat">
+        <span class="cs-stat-num">68%</span>
+        <span class="cs-stat-label">of electronics shoppers leave without buying due to information overload</span>
+      </div>
+      <div class="cs-stat">
+        <span class="cs-stat-num">QR</span>
+        <span class="cs-stat-label">triggered — zero app download friction, instant product context</span>
+      </div>
+      <div class="cs-stat">
+        <span class="cs-stat-num">3</span>
+        <span class="cs-stat-label">intent modes: compare, recommend, explain — matched to user goal</span>
+      </div>
+      <div class="cs-stat">
+        <span class="cs-stat-num">2024</span>
+        <span class="cs-stat-label">Springer publication + Cambridge conference presentation</span>
+      </div>
+    </div>
+
+    <div class="phone-gallery">
+      <div class="phone-frame">
+        <div class="phone-frame-inner"><img src="assets/techie/techie-1.png" alt="Techie QR scan" /></div>
+        <p class="phone-frame-caption">QR scan entry — zero download</p>
+      </div>
+      <div class="phone-frame">
+        <div class="phone-frame-inner"><img src="assets/techie/techie-3.png" alt="Techie chat" /></div>
+        <p class="phone-frame-caption">Chat — plain language answers</p>
+      </div>
+      <div class="phone-frame">
+        <div class="phone-frame-inner"><img src="assets/techie/techie-4.png" alt="Techie spec explainer" /></div>
+        <p class="phone-frame-caption">Spec explainer — 120Hz simplified</p>
+      </div>
+      <div class="phone-frame">
+        <div class="phone-frame-inner"><img src="assets/techie/techie-5.png" alt="Techie expert assist" /></div>
+        <p class="phone-frame-caption">Staff handoff — always available</p>
+      </div>
+    </div>
+  </header>
+
+  <div class="cs-body">
+
+    <div class="cs-section fade-up">
+      <span class="cs-section-label">01 · Problem</span>
+      <h2>Information overload kills sales — and wastes time</h2>
+
+      <div class="phone-gallery">
+        <div class="phone-frame">
+          <div class="phone-frame-inner"><img src="assets/techie/techie-2.png" alt="Techie product comparison" /></div>
+          <p class="phone-frame-caption">Comparison — Galaxy S25 vs iPhone</p>
+        </div>
+        <div class="phone-frame">
+          <div class="phone-frame-inner"><img src="assets/techie/techie-3.png" alt="Techie spec chat" /></div>
+          <p class="phone-frame-caption">"What is 120Hz?" answered simply</p>
+        </div>
+      </div>
+
+      <div class="two-col" style="margin-top:24px;">
+        <p>Electronics retail is a paradox of choice problem. A single shelf can hold 8 TVs with 15+ specs each. Staff are stretched during peak hours. Result: 68% of shoppers report leaving without buying because they couldn't make a confident decision.</p>
+        <p>Existing solutions dump information without helping process it. The opportunity: a conversational layer that translates raw specs into decisions — contextual, instant, zero download friction.</p>
+      </div>
+    </div>
+
+    <div class="cs-section fade-up">
+      <span class="cs-section-label">02 · Research</span>
+      <h2>Three weeks of in-store observation</h2>
+
+      <div class="insight-grid">
+        <div class="insight-card">
+          <span class="insight-card-icon">⏱️</span>
+          <h4>Avg. 23 mins of browsing</h4>
+          <p>Most of that time spent re-reading the same spec cards — not exploring new options. Decision paralysis, not discovery.</p>
+        </div>
+        <div class="insight-card">
+          <span class="insight-card-icon">🙋</span>
+          <h4>Only 40% asked staff</h4>
+          <p>Felt embarrassed, couldn't find staff, or didn't want pressure. A chatbot removes all three barriers simultaneously.</p>
+        </div>
+        <div class="insight-card">
+          <span class="insight-card-icon">🔁</span>
+          <h4>"Compare" was the #1 ask</h4>
+          <p>"What's the difference between X and Y" was the most common staff question — a perfect conversational use case.</p>
+        </div>
+        <div class="insight-card">
+          <span class="insight-card-icon">📱</span>
+          <h4>QR > App store</h4>
+          <p>Shoppers refused to download a retailer app. QR on the shelf — no install, no account — had near-zero friction in testing.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cs-section fade-up">
+      <span class="cs-section-label">03 · Design</span>
+      <h2>The conversation flows and UI</h2>
+
+      <div class="phone-gallery">
+        <div class="phone-frame">
+          <div class="phone-frame-inner"><img src="assets/techie/techie-1.png" alt="Techie QR scan" /></div>
+          <p class="phone-frame-caption">Scan to start — no app needed</p>
+        </div>
+        <div class="phone-frame">
+          <div class="phone-frame-inner"><img src="assets/techie/techie-2.png" alt="Compare products" /></div>
+          <p class="phone-frame-caption">Compare 3 flagships instantly</p>
+        </div>
+        <div class="phone-frame">
+          <div class="phone-frame-inner"><img src="assets/techie/techie-4.png" alt="Spec explainer" /></div>
+          <p class="phone-frame-caption">Specs → plain decisions</p>
+        </div>
+        <div class="phone-frame">
+          <div class="phone-frame-inner"><img src="assets/techie/techie-5.png" alt="Expert handoff" /></div>
+          <p class="phone-frame-caption">Expert confirmed — 2 min wait</p>
+        </div>
+      </div>
+
+      <div class="cs-quote">
+        <p>"The chatbot had to know when to step back. If a customer was ready to buy, it got out of the way. Conversational design is as much about silence as speech."</p>
+      </div>
+
+      <div class="process-steps" style="margin-top:28px;">
+        <div class="process-step"><span class="process-step-num">Intent detection</span><h4>Compare / Recommend / Explain</h4></div>
+        <div class="process-step"><span class="process-step-num">Plain language</span><h4>Specs → decisions</h4></div>
+        <div class="process-step"><span class="process-step-num">Context injection</span><h4>QR pre-loads shelf data</h4></div>
+        <div class="process-step"><span class="process-step-num">Graceful handoff</span><h4>"Talk to staff" always visible</h4></div>
+      </div>
+    </div>
+
+    <div class="cs-section fade-up">
+      <span class="cs-section-label">04 · Publication</span>
+      <h2>Academic validation</h2>
+      <div class="two-col">
+        <p><strong>Springer (2024):</strong> Research on conversational UX in physical retail accepted and published in Springer conference proceedings. Validates the problem framing and QR-as-entry-point as the novel contribution.</p>
+        <p><strong>Cambridge University:</strong> Presented findings to a research audience. Key feedback: the QR-triggered entry eliminated download friction as the primary adoption barrier — confirmed as the most novel design decision.</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;padding-bottom:48px;">
+      <a href="ara.html" class="btn">← Ara</a>
+      <a href="azorte.html" class="btn btn-filled">Next: Azorte →</a>
+    </div>
+
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-left">Viha Nagarkatti 🛒</div>
+    <ul class="footer-links">
+      <li><a href="https://www.linkedin.com/in/viha-nagarkatti-382a371a8" target="_blank">LinkedIn</a></li>
+      <li><a href="mailto:vihanagarkatti@gmail.com">Email</a></li>
+      <li><a href="projects.html">Projects</a></li>
+    </ul>
+  </div>
+</footer>
+
+<div class="chat-announce" id="chatAnnounce"><button class="announce-dismiss" id="announceDismiss">✕</button><span class="announce-headline">🤖 About Techie</span><p class="announce-body">Questions about this project?</p><button class="announce-cta" id="announceCta">ask us →</button></div>
+<button class="chat-toggle" id="chatToggle">🛒</button>
+<div class="chat-panel" id="chatPanel"><div class="chat-header"><span class="chat-header-icon">🧾</span><span>Store Assistant</span><button class="chat-close" id="chatClose">✕</button></div><div class="chat-messages" id="chatMessages"></div><div class="chat-input-row"><input class="chat-input" id="chatInput" type="text" placeholder="Ask about this project…" autocomplete="off" /><button class="chat-send" id="chatSend">↑</button></div></div>
+
+<script src="main.js"></script>
+</body>
+</html>
