@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wayground (Quizizz) — Viha Nagarkatti</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    :root { --exp-accent: #7C3AED; --exp-bg: #F3EFFF; }
+
+    .contribution-block { margin-bottom: 56px; }
+    .contribution-num {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--exp-accent);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 6px;
+    }
+    .contribution-block h2 { margin-bottom: 12px; }
+    .contribution-block > p { color: rgba(26,18,8,0.72); font-size: 0.95rem; line-height: 1.7; margin-bottom: 20px; }
+
+    .sub-contribution { border-left: 2px solid var(--faint); padding-left: 20px; margin: 20px 0; }
+    .sub-contribution h4 { font-size: 0.9rem; font-weight: 700; margin-bottom: 6px; }
+    .sub-contribution p { font-size: 0.88rem; color: rgba(26,18,8,0.68); line-height: 1.65; margin: 0; }
+    .sub-contribution + .sub-contribution { margin-top: 18px; }
+
+    .impact-callout {
+      background: var(--exp-bg);
+      border: 1.5px solid rgba(124,58,237,0.2);
+      border-radius: 6px;
+      padding: 20px 24px;
+      margin: 24px 0;
+    }
+    .impact-callout-label {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: var(--exp-accent);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 8px;
+      display: block;
+    }
+    .impact-callout p { font-size: 0.88rem; color: rgba(26,18,8,0.72); margin: 0; line-height: 1.6; }
+
+    .learnings-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-top: 24px;
+    }
+    .learning-card { padding: 18px 20px; border: 1.5px solid var(--faint); border-radius: 6px; background: var(--paper); }
+    .learning-card-icon { font-size: 1.3rem; display: block; margin-bottom: 8px; }
+    .learning-card h4 { font-size: 0.85rem; font-weight: 700; margin-bottom: 6px; }
+    .learning-card p { font-size: 0.8rem; color: var(--mid); margin: 0; line-height: 1.5; }
+
+    /* placeholder for screenshots you'll add later */
+    .placeholder-block {
+      background: var(--shelf-bg);
+      border: 1.5px dashed rgba(26,18,8,.18);
+      border-radius: 6px;
+      padding: 40px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      text-align: center;
+      margin: 24px 0;
+      min-height: 200px;
+    }
+    .placeholder-block p { font-size: 0.82rem; color: rgba(26,18,8,.38); margin: 0; line-height: 1.5; }
+    .placeholder-block code { font-size: 0.72rem; color: rgba(26,18,8,.45); background: var(--faint); padding: 4px 10px; border-radius: 4px; }
+
+    /* company context info cards */
+    .context-pills {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+    .context-pill {
+      padding: 10px 16px;
+      background: white;
+      border-radius: 6px;
+      border: 1px solid rgba(124,58,237,0.2);
+    }
+    .context-pill-label {
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      color: rgba(26,18,8,0.4);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 2px;
+    }
+    .context-pill-value { font-size: 0.82rem; font-weight: 600; }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><span class="nav-logo-dot"></span>Viha's Store</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="work.html" class="active">Experience</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="mailto:vihanagarkatti@gmail.com" class="nav-cta">Say hello 👋</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page">
+  <a href="work.html" class="back-link">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    Back to experience
+  </a>
+
+  <!-- ── HERO ── -->
+  <header class="cs-hero fade-up">
+    <div class="cs-meta">
+      <span class="tag tag-soft" style="background:#F3EFFF;color:#7C3AED;border-color:#7C3AED;">Instructional Designer</span>
+      <span class="tag tag-outline">Ed-Tech</span>
+      <span class="tag tag-soft">UX Strategy</span>
+      <span class="tag tag-soft">Learning Experience</span>
+    </div>
+    <h1 class="cs-title">Wayground <span style="font-size:clamp(1rem,2vw,1.4rem);font-weight:400;color:var(--mid);">(formerly Quizizz)</span></h1>
+    <p class="cs-subtitle">Consulted as an Instructional Designer at Wayground — an ed-tech platform used by millions of teachers and students worldwide. Applied UX research, design thinking, and instructional design principles to improve how learners engage with content on the platform.</p>
+
+    <div class="cs-stats">
+      <div class="cs-stat">
+        <span class="cs-stat-num" style="color:#7C3AED;">Ed-Tech</span>
+        <span class="cs-stat-label">platform used by teachers and students globally</span>
+      </div>
+      <div class="cs-stat">
+        <span class="cs-stat-num" style="color:#7C3AED;">UX +</span>
+        <span class="cs-stat-label">instructional design — where learning science meets product thinking</span>
+      </div>
+      <div class="cs-stat">
+        <span class="cs-stat-num" style="color:#7C3AED;">Cross</span>
+        <span class="cs-stat-label">functional collaboration with product and content teams</span>
+      </div>
+      <div class="cs-stat">
+        <span class="cs-stat-num" style="color:#7C3AED;">5 mo</span>
+        <span class="cs-stat-label">Aug – Dec 2025 · Consultant</span>
+      </div>
+    </div>
+
+    <!-- company context -->
+    <div class="cs-img-block" style="background:#F3EFFF;">
+      <div style="padding:28px 24px;display:flex;gap:24px;align-items:flex-start;flex-wrap:wrap;">
+        <div style="flex:1;min-width:220px;">
+          <p style="font-family:var(--font-mono);font-size:0.68rem;color:#7C3AED;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:10px;">About Wayground</p>
+          <p style="font-size:0.88rem;color:rgba(26,18,8,0.7);line-height:1.6;margin:0;">Wayground (formerly Quizizz) is a game-based learning platform used by over 50 million teachers and students in 150+ countries. The platform blends gamification with content delivery to make learning engaging — and the design of that learning experience matters as much as the content itself.</p>
+        </div>
+        <div class="context-pills">
+          <div class="context-pill">
+            <div class="context-pill-label">Sector</div>
+            <div class="context-pill-value">Ed-Tech · B2B2C</div>
+          </div>
+          <div class="context-pill">
+            <div class="context-pill-label">Platform</div>
+            <div class="context-pill-value">Web · Mobile</div>
+          </div>
+          <div class="context-pill">
+            <div class="context-pill-label">Users</div>
+            <div class="context-pill-value">Teachers + Students</div>
+          </div>
+        </div>
+      </div>
+      <p class="cs-img-caption">Wayground (formerly Quizizz) · Instructional Designer Consultant · Aug – Dec 2025</p>
+    </div>
+  </header>
+
+  <!-- ── BODY ── -->
+  <div class="cs-body">
+
+    <!-- CONTEXT -->
+    <div class="cs-section fade-up">
+      <span class="cs-section-label">00 · Context</span>
+      <h2>Why instructional design is a UX problem</h2>
+      <div class="two-col">
+        <p>Instructional design and UX design share the same fundamental question: <em>how do people actually experience and process what we've built for them?</em> In a learning platform, a poorly structured content flow isn't just frustrating — it actively undermines the transfer of knowledge. Cognitive overload, lack of clear progression, and misaligned feedback loops all produce the same outcome: learners disengage.</p>
+        <p>At Wayground, I brought a UX research lens to instructional design decisions — treating learner behaviour as data, and content structure as an interface to be designed and iterated on, not just written.</p>
+      </div>
+    </div>
+
+    <!-- CONTRIBUTION 1 -->
+    <div class="contribution-block fade-up">
+      <span class="contribution-num">Contribution 01</span>
+      <h2>UX Research on Learner Behaviour</h2>
+      <p>Before proposing any instructional frameworks, I studied how learners actually interacted with the platform — looking at where they dropped off, which content formats held attention, and what friction existed in the learning flow.</p>
+
+      <div class="sub-contribution">
+        <h4>Friction point mapping</h4>
+        <p>Applied UX research methods (behavioural analysis, task flow review, heuristic evaluation) to map where learners were disengaging — identifying specific moments in the content experience where cognitive load spiked and completion rates dropped. This gave the content team a prioritised list of structural issues to address rather than qualitative hunches.</p>
+      </div>
+      <div class="sub-contribution">
+        <h4>Content consumption pattern analysis</h4>
+        <p>Reviewed how learners moved through content sequences — noting patterns like skipping intro sections, replaying specific segments, and abandoning before assessments. These patterns informed decisions about content chunking, pacing, and where to introduce checkpoints versus where to reduce friction.</p>
+      </div>
+
+      <div class="placeholder-block">
+        <span style="font-size:1.6rem;">📊</span>
+        <p>Add your research documentation, flow diagrams, or annotated screenshots here</p>
+        <code>assets/wayground-research-1.png · assets/wayground-flow.png</code>
+      </div>
+
+      <div class="impact-callout">
+        <span class="impact-callout-label">Impact</span>
+        <p>Friction point mapping gave the content and product teams a shared, evidence-based view of learner pain points — replacing assumption-driven content decisions with behaviour-informed ones.</p>
+      </div>
+    </div>
+
+    <div class="divider" style="margin:40px 0;"></div>
+
+    <!-- CONTRIBUTION 2 -->
+    <div class="contribution-block fade-up">
+      <span class="contribution-num">Contribution 02</span>
+      <h2>Instructional Framework Design</h2>
+      <p>Designed instructional frameworks that balanced established learning science principles (spaced repetition, retrieval practice, worked examples) with the practical constraints of a gamified platform — where engagement mechanics and learning outcomes can easily pull in opposite directions.</p>
+
+      <div class="sub-contribution">
+        <h4>Learning sequence architecture</h4>
+        <p>Structured content sequences with clear learning progressions — ensuring each unit built on prior knowledge, introduced challenge at the right gradient, and gave learners enough context before asking them to apply what they'd learned. Applied principles like the worked example effect and cognitive load theory to reduce unnecessary complexity in early stages.</p>
+      </div>
+      <div class="sub-contribution">
+        <h4>Feedback loop design</h4>
+        <p>Redesigned how learners received feedback on incorrect answers — moving from binary right/wrong to explanatory feedback that addressed the likely misconception behind the error. This is a known instructional intervention for improving long-term retention, not just in-session performance.</p>
+      </div>
+      <div class="sub-contribution">
+        <h4>Accessibility in instructional content</h4>
+        <p>Ensured instructional content met accessibility standards — reviewing reading level, visual presentation, and content structure for learners with varying literacy and attention profiles. Flagged content that relied too heavily on visual-only cues or assumed prior knowledge that wasn't established in the sequence.</p>
+      </div>
+
+      <div class="placeholder-block">
+        <span style="font-size:1.6rem;">📋</span>
+        <p>Add your framework diagrams, content structure maps, or annotated examples</p>
+        <code>assets/wayground-framework.png · assets/wayground-feedback.png</code>
+      </div>
+
+      <div class="impact-callout">
+        <span class="impact-callout-label">Impact</span>
+        <p>Instructional frameworks created a reusable template for the content team — reducing the time to structure new content while improving consistency in pedagogical quality across modules.</p>
+      </div>
+    </div>
+
+    <div class="divider" style="margin:40px 0;"></div>
+
+    <!-- CONTRIBUTION 3 -->
+    <div class="contribution-block fade-up">
+      <span class="contribution-num">Contribution 03</span>
+      <h2>Cross-functional Collaboration — Product & Content Teams</h2>
+      <p>Worked across both product and content teams — translating between two teams who often speak different languages: product teams thinking in flows and features, content teams thinking in learning outcomes and curriculum.</p>
+
+      <div class="sub-contribution">
+        <h4>Aligning instructional decisions with product UX</h4>
+        <p>Collaborated with the product team to ensure instructional design decisions were reflected in the platform's UX — advocating for UI changes that supported learning goals (e.g. progressive disclosure of complex content, contextual hints before assessment items) rather than friction-reducing moves that inadvertently undermined retention.</p>
+      </div>
+      <div class="sub-contribution">
+        <h4>Content team guidelines and documentation</h4>
+        <p>Created documentation and guidelines for the content team on structuring learning sequences — making instructional design principles accessible to non-specialists, so they could apply them consistently without needing a designer in every content review cycle.</p>
+      </div>
+
+      <div class="impact-callout">
+        <span class="impact-callout-label">What this taught me</span>
+        <p>Instructional design sits at the intersection of UX, content strategy, and learning science. Working in this space showed me how much product design can learn from instructional design — particularly around progressive disclosure, error recovery, and scaffolded complexity — and vice versa.</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- LEARNINGS -->
+    <div class="cs-section fade-up">
+      <span class="cs-section-label">Key Learnings</span>
+      <h2>What Wayground taught me</h2>
+      <div class="learnings-grid">
+        <div class="learning-card">
+          <span class="learning-card-icon">🧠</span>
+          <h4>Learning science is UX research</h4>
+          <p>Cognitive load theory, spaced repetition, and retrieval practice are all just UX principles applied to learning contexts. The vocabulary is different; the underlying thinking is the same.</p>
+        </div>
+        <div class="learning-card">
+          <span class="learning-card-icon">🔗</span>
+          <h4>Design and content aren't separate</h4>
+          <p>The structure of content IS a design decision. How information is sequenced, chunked, and paced shapes the user experience just as much as the interface does.</p>
+        </div>
+        <div class="learning-card">
+          <span class="learning-card-icon">🌉</span>
+          <h4>Translation is a design skill</h4>
+          <p>Making product team priorities legible to content teams, and vice versa, required the same kind of communication design that makes user research legible to engineers. Translation is underrated.</p>
+        </div>
+        <div class="learning-card">
+          <span class="learning-card-icon">📐</span>
+          <h4>Frameworks scale, one-offs don't</h4>
+          <p>Creating reusable instructional frameworks rather than reviewing content case by case was the highest-leverage contribution I made. Systems thinking applied to content work.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;padding-bottom:48px;">
+      <a href="work.html" class="btn">← All experience</a>
+      <a href="exp-pharmeasy.html" class="btn btn-filled">Next: PharmEasy →</a>
+    </div>
+
+  </div><!-- /cs-body -->
+</div><!-- /page -->
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-left">Viha Nagarkatti 🛒</div>
+    <ul class="footer-links">
+      <li><a href="https://www.linkedin.com/in/viha-nagarkatti-382a371a8" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="mailto:vihanagarkatti@gmail.com">Email</a></li>
+      <li><a href="work.html">Experience</a></li>
+    </ul>
+  </div>
+</footer>
+
+<div class="chat-announce" id="chatAnnounce">
+  <button class="announce-dismiss" id="announceDismiss">✕</button>
+  <span class="announce-headline">🎓 Wayground</span>
+  <p class="announce-body">Questions about this role?</p>
+  <button class="announce-cta" id="announceCta">ask us →</button>
+</div>
+<button class="chat-toggle" id="chatToggle">🛒</button>
+<div class="chat-panel" id="chatPanel">
+  <div class="chat-header">
+    <span class="chat-header-icon">🧾</span>
+    <span>Store Assistant</span>
+    <button class="chat-close" id="chatClose">✕</button>
+  </div>
+  <div class="chat-messages" id="chatMessages"></div>
+  <div class="chat-input-row">
+    <input class="chat-input" id="chatInput" type="text" placeholder="Ask about this role…" autocomplete="off" />
+    <button class="chat-send" id="chatSend">↑</button>
+  </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
