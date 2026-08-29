@@ -289,11 +289,11 @@ const botFlows = {
       chips: ["See her projects", "Her design process"]
     },
     "tool": {
-      text: "My toolkit: Figma (primary), Framer, Adobe Illustrator, Photoshop, After Effects, HTML/CSS. For research: user interviews, usability testing, journey mapping, service blueprinting, competitive audits.",
+      text: "My toolkit: Figma (primary), Framer, Adobe Illustrator, Photoshop, After Effects, HTML/CSS, plus basic front-end development and databases. For research: user interviews, usability testing, journey mapping, service blueprinting, competitive audits.",
       chips: ["See her projects", "Her research approach"]
     },
     "skill": {
-      text: "My core skills: product design, UX research, conversational UI, service design, design systems, editorial/publication design, usability testing, and research writing (Springer-published). Strong cross-functional collaboration across PM, engineering, and data teams.",
+      text: "My core skills: product design, UX research, conversational UI, service design, design systems, editorial/publication design, usability testing, and research writing (Springer-published), plus enough front-end and database knowledge to work closely with engineering. Strong cross-functional collaboration across PM, engineering, and data teams.",
       chips: ["See her projects", "Her work experience"]
     },
     "design system": {
@@ -373,6 +373,62 @@ const botFlows = {
       text: "Capital One is on my list. My research work at PharmEasy (designing for 50+ users, complex multi-flow journeys) and my service design skills translate well to fintech UX challenges.",
       link: { label: "See PharmEasy work →", url: "exp-pharmeasy.html" },
       chips: ["Contact her"]
+    },
+
+    /* RECRUITER LOGISTICS: visa, focus area, tech skills, leadership, relocation */
+    "visa": {
+      text: "I'm an international student on an F-1 visa, so I'd need CPT for a US internship, standard for OPT-eligible international grad students. Most companies can support this without extra cost or a separate sponsorship process. Happy to share more detail on request.",
+      chips: ["Is she available?", "Contact her"]
+    },
+    "sponsor": {
+      text: "I'm an international student on an F-1 visa, so I'd need CPT for a US internship, standard for OPT-eligible international grad students. Most companies can support this without extra cost or a separate sponsorship process. Happy to share more detail on request.",
+      chips: ["Is she available?", "Contact her"]
+    },
+    "cpt": {
+      text: "I'm an international student on an F-1 visa, so I'd need CPT for a US internship, standard for OPT-eligible international grad students. Most companies can support this without extra cost or a separate sponsorship process. Happy to share more detail on request.",
+      chips: ["Is she available?", "Contact her"]
+    },
+    "specializ": {
+      text: "My HCI focus right now is a mix: human-AI interaction and conversational UX (Techie, and how I use AI in my own process), designing for kids (Wayground's K-12 audience), and accessibility (Digital India Corp, PharmEasy's 50+ users). I gravitate toward problems where the user isn't the 'default' assumed user.",
+      chips: ["See her projects", "Contact her"]
+    },
+    "focus area": {
+      text: "My HCI focus right now is a mix: human-AI interaction and conversational UX (Techie, and how I use AI in my own process), designing for kids (Wayground's K-12 audience), and accessibility (Digital India Corp, PharmEasy's 50+ users). I gravitate toward problems where the user isn't the 'default' assumed user.",
+      chips: ["See her projects", "Contact her"]
+    },
+    "kids": {
+      text: "Designing for kids is one of my growing interests. It came out of my work at Wayground, where the primary users were K-12 students. It's its own discipline: attention span, reading level, and what actually motivates a 10-year-old look nothing like adult UX.",
+      link: { label: "See Wayground work →", url: "exp-wayground.html" },
+      chips: ["Tell me about Wayground", "Her research approach"]
+    },
+    "children": {
+      text: "Designing for kids is one of my growing interests. It came out of my work at Wayground, where the primary users were K-12 students. It's its own discipline: attention span, reading level, and what actually motivates a 10-year-old look nothing like adult UX.",
+      link: { label: "See Wayground work →", url: "exp-wayground.html" },
+      chips: ["Tell me about Wayground", "Her research approach"]
+    },
+    "database": {
+      text: "Beyond design tools, I'm comfortable with databases and basic front-end development, enough to understand data structures and speak the same language as engineers during handoff, though design tools remain my primary craft.",
+      chips: ["What tools does she use?", "Her design process"]
+    },
+    "front end": {
+      text: "Beyond design tools, I'm comfortable with databases and basic front-end development, enough to understand data structures and speak the same language as engineers during handoff, though design tools remain my primary craft.",
+      chips: ["What tools does she use?", "Her design process"]
+    },
+    "leadership": {
+      text: "I've led rather than just contributed: I owned the 50+ research workstream at PharmEasy, was the sole designer at Nuava end-to-end, and worked directly under the Head of UX at Digital India Corp as one of a 3-person team. I'm comfortable owning a workstream, not just executing tickets.",
+      chips: ["See her experience", "Contact her"]
+    },
+    "relocat": {
+      text: "I'm open to relocating anywhere in the US for the right internship. I'm currently based at the University of Maryland (College Park, MD), so I'm already stateside and can start without visa-timing delays.",
+      chips: ["Is she available?", "Contact her"]
+    },
+    "start date": {
+      text: "I'm targeting Summer 2027 for my next internship, but I'm flexible on exact start and end dates within that window and happy to align with a company's standard internship cohort schedule.",
+      chips: ["Is she available?", "Contact her"]
+    },
+    "can you start": {
+      text: "I'm targeting Summer 2027 for my next internship, but I'm flexible on exact start and end dates within that window and happy to align with a company's standard internship cohort schedule.",
+      chips: ["Is she available?", "Contact her"]
     },
 
     /* GENERIC NAVIGATION */
