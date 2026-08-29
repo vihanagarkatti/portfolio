@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About — Viha Nagarkatti</title>
+  <title>About: Viha Nagarkatti</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -18,11 +18,21 @@
       margin-bottom: 56px;
     }
     .about-photo-col { position: relative; }
+    /* Polaroid-style frame: white card, thick bottom border, slight tilt */
     .photo-frame {
       width: 100%;
-      aspect-ratio: 3/4;
-      border: 2px solid var(--ink);
-      border-radius: 4px;
+      max-width: 300px;
+      margin: 0 auto;
+      background: #fdfdfb;
+      border: 1px solid rgba(26,18,8,0.08);
+      border-radius: 2px;
+      padding: 14px 14px 56px;
+      box-shadow: 0 14px 28px rgba(26,18,8,0.16), 0 3px 8px rgba(26,18,8,0.08);
+      transform: rotate(-2.5deg);
+      position: relative;
+    }
+    .photo-frame-inner-shot {
+      aspect-ratio: 4/5;
       overflow: hidden;
       background: var(--shelf-bg);
       display: flex;
@@ -38,15 +48,15 @@
       padding: 20px;
       line-height: 1.4;
     }
-    /* If you add a photo: img inside .photo-frame will fill it */
-    .photo-frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    /* If you add a photo: img inside .photo-frame-inner-shot will fill it */
+    .photo-frame-inner-shot img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 20%; display: block; }
     .photo-caption {
       font-family: var(--font-hand);
-      font-size: 0.9rem;
-      color: var(--mid);
+      font-size: 1rem;
+      color: rgba(26,18,8,0.55);
       text-align: center;
-      margin-top: 10px;
-      transform: rotate(-0.5deg);
+      margin-top: 16px;
+      transform: rotate(-2.5deg);
     }
 
     .about-text-col { padding-top: 8px; }
@@ -121,7 +131,7 @@
 
     @media (max-width: 768px) {
       .about-grid { grid-template-columns: 1fr; gap: 32px; }
-      .photo-frame { max-width: 280px; margin: 0 auto; }
+      .photo-frame { max-width: 260px; }
       .philosophy-item { grid-template-columns: 1fr; gap: 6px; }
     }
   </style>
@@ -147,10 +157,8 @@
   <div class="about-grid fade-up">
     <div class="about-photo-col">
       <div class="photo-frame">
-        <!-- Replace with: <img src="assets/viha-photo.jpg" alt="Viha Nagarkatti"> -->
-        <!-- To add your photo: save it as assets/viha-photo.jpg and uncomment the line above -->
-        <div class="photo-placeholder-text">
-          📸<br/><br/>Add your photo here:<br/><br/><code style="font-size:0.7rem;opacity:0.6;">assets/viha-photo.jpg</code><br/><br/>Uncomment the img tag in about.html
+        <div class="photo-frame-inner-shot">
+          <img src="assets/viha-photo.jpg" alt="Viha Nagarkatti" />
         </div>
       </div>
       <p class="photo-caption">Viha, Bengaluru 🌿</p>
@@ -159,9 +167,9 @@
       <span class="about-eyebrow">🍶 Hello there</span>
       <h1>I'm Viha Nagarkatti</h1>
 
-      <p>I'm a product designer and HCI Master's student at the University of Maryland — I think in systems, build in Figma, and have a genuine soft spot for hand-drawn things (as you may have noticed).</p>
+      <p>I'm a product designer and HCI Master's student at the University of Maryland. I think in systems, build in Figma, and have a genuine soft spot for hand-drawn things (as you may have noticed).</p>
 
-      <p>I'm drawn to design problems that sit at the intersection of human behaviour and social impact — the kind where getting the details right actually matters. My work spans mobile apps, conversational UI, service design, and publication design, always grounded in real research before anything gets near a canvas.</p>
+      <p>I'm drawn to design problems that sit at the intersection of human behaviour and social impact, the kind where getting the details right actually matters. My work spans mobile apps, conversational UI, service design, and publication design, always grounded in real research before anything gets near a canvas.</p>
 
       <p>My research has been published in Springer and presented at Cambridge University, which still surprises me when I say it out loud. It's reinforced a conviction I hold strongly: <strong>design without evidence is decoration.</strong></p>
 
@@ -187,22 +195,22 @@
       <div class="personality-card">
         <span class="personality-card-emoji">🛒</span>
         <h3>Grocery store enthusiast</h3>
-        <p>I genuinely love browsing grocery stores — the colour blocking, the product hierarchies, the way everything vies for attention. It's accidental UX everywhere. (Hence this portfolio.)</p>
+        <p>I genuinely love browsing grocery stores: the colour blocking, the product hierarchies, the way everything vies for attention. It's accidental UX everywhere. (Hence this portfolio.)</p>
       </div>
       <div class="personality-card">
         <span class="personality-card-emoji">📸</span>
         <h3>Photography</h3>
-        <p>I shoot film and digital — mostly street and still life. Photography and design share the same muscle: knowing what to include and what to leave out.</p>
+        <p>I shoot film and digital, mostly street and still life. Photography and design share the same muscle: knowing what to include and what to leave out.</p>
       </div>
       <div class="personality-card">
         <span class="personality-card-emoji">🧶</span>
         <h3>Crochet maker</h3>
-        <p>I run a small crochet business, tripplecrochet. Pattern-following is surprisingly similar to design systems thinking — modular, rule-bound, but with room for personality.</p>
+        <p>I run a small crochet business, tripplecrochet. Pattern-following is surprisingly similar to design systems thinking: modular, rule-bound, but with room for personality.</p>
       </div>
       <div class="personality-card">
         <span class="personality-card-emoji">✏️</span>
         <h3>Hand-drawn everything</h3>
-        <p>I sketch before I wireframe. There's something about a wobbly line that commits to nothing — the best state for early-stage ideas.</p>
+        <p>I sketch before I wireframe. There's something about a wobbly line that commits to nothing, the best state for early-stage ideas.</p>
       </div>
     </div>
   </section>
@@ -213,23 +221,23 @@
     <div class="philosophy-items">
       <div class="philosophy-item">
         <span class="philosophy-label">On research</span>
-        <p class="philosophy-text"><strong>I never design for assumptions.</strong> The most important design work happens before the canvas opens — in interviews, in observations, in understanding why people do what they do, not what they say they do.</p>
+        <p class="philosophy-text"><strong>I never design for assumptions.</strong> The most important design work happens before the canvas opens: in interviews, in observations, in understanding why people do what they do, not what they say they do.</p>
       </div>
       <div class="philosophy-item">
         <span class="philosophy-label">On simplicity</span>
-        <p class="philosophy-text"><strong>Clarity is the hardest thing to design.</strong> Anyone can add features. The discipline is knowing what to cut — what serves the user's actual goal versus what serves the product's internal complexity.</p>
+        <p class="philosophy-text"><strong>Clarity is the hardest thing to design.</strong> Anyone can add features. The discipline is knowing what to cut, what serves the user's actual goal versus what serves the product's internal complexity.</p>
       </div>
       <div class="philosophy-item">
         <span class="philosophy-label">On systems</span>
-        <p class="philosophy-text"><strong>Good design is invisible.</strong> When the system is well-built, users don't notice the design — they just accomplish what they came to do. That invisibility is the goal, not a failure.</p>
+        <p class="philosophy-text"><strong>Good design is invisible.</strong> When the system is well-built, users don't notice the design; they just accomplish what they came to do. That invisibility is the goal, not a failure.</p>
       </div>
       <div class="philosophy-item">
         <span class="philosophy-label">On impact</span>
-        <p class="philosophy-text"><strong>I'm drawn to problems that matter.</strong> Not every project needs to change the world. But when a design decision could meaningfully improve someone's safety, access, or daily life — that's where I bring my full attention.</p>
+        <p class="philosophy-text"><strong>I'm drawn to problems that matter.</strong> Not every project needs to change the world. But when a design decision could meaningfully improve someone's safety, access, or daily life, that's where I bring my full attention.</p>
       </div>
       <div class="philosophy-item">
         <span class="philosophy-label">On craft</span>
-        <p class="philosophy-text"><strong>The details are the design.</strong> Pixel-perfect spacing isn't vanity — it communicates care. Users may not consciously notice the 8px instead of 12px, but they feel the difference.</p>
+        <p class="philosophy-text"><strong>The details are the design.</strong> Pixel-perfect spacing isn't vanity; it communicates care. Users may not consciously notice the 8px instead of 12px, but they feel the difference.</p>
       </div>
     </div>
   </section>
@@ -256,7 +264,7 @@
       </div>
       <div class="currently-item">
         <span class="currently-item-label">Reading</span>
-        <div class="currently-item-value">The Design of Everyday Things — Don Norman</div>
+        <div class="currently-item-value">The Design of Everyday Things, Don Norman</div>
       </div>
       <div class="currently-item">
         <span class="currently-item-label">Making</span>
@@ -268,7 +276,7 @@
   <!-- CONTACT CTA -->
   <div style="text-align:center;padding:56px 0 32px;border-top:1.5px solid var(--faint);" class="fade-up">
     <span style="font-family:var(--font-hand);font-size:1.8rem;display:block;margin-bottom:12px;">Let's build something good.</span>
-    <p style="color:var(--mid);max-width:400px;margin:0 auto 24px;font-size:0.9rem;">If you're building a product that helps people, or an internship team that values research-driven design — I'd love to hear from you.</p>
+    <p style="color:var(--mid);max-width:400px;margin:0 auto 24px;font-size:0.9rem;">If you're building a product that helps people, or an internship team that values research-driven design, I'd love to hear from you.</p>
     <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
       <a href="mailto:vihanagarkatti@gmail.com" class="btn btn-accent">Say hello →</a>
       <a href="projects.html" class="btn">See my work</a>

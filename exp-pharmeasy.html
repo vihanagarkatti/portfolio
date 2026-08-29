@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PharmEasy — Viha Nagarkatti</title>
+  <title>PharmEasy: Viha Nagarkatti</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -33,6 +33,12 @@
     .img-full { margin: 24px 0; border-radius: 8px; overflow: hidden; border: 1px solid var(--faint); }
     .img-full img { width: 100%; height: auto; display: block; }
     .img-caption { padding: 10px 16px; font-size: 0.78rem; color: var(--mid); font-style: italic; border-top: 1px solid var(--faint); background: var(--shelf-bg); }
+
+    /* these are flat Figma mockups, not edge-to-edge device screenshots,
+       so drop the phone-bezel/notch chrome and just round the image corners */
+    .phone-frame-inner { background: var(--paper); border-radius: 14px; box-shadow: 0 4px 16px rgba(26,18,8,0.08); }
+    .phone-frame-inner::before { display: none; }
+    .phone-frame-inner img { border-radius: 12px; }
   </style>
 </head>
 <body>
@@ -68,7 +74,7 @@
 
     <div class="cs-stats">
       <div class="cs-stat"><span class="cs-stat-num" style="color:#00A651;">4</span><span class="cs-stat-label">workstreams: research, UX analysis, UI design, strategy</span></div>
-      <div class="cs-stat"><span class="cs-stat-num" style="color:#00A651;">50+</span><span class="cs-stat-label">age group — primary user segment for conversational commerce research</span></div>
+      <div class="cs-stat"><span class="cs-stat-num" style="color:#00A651;">50+</span><span class="cs-stat-label">age group, primary user segment for conversational commerce research</span></div>
       <div class="cs-stat"><span class="cs-stat-num" style="color:#00A651;">10+</span><span class="cs-stat-label">user journeys mapped end-to-end across health features</span></div>
       <div class="cs-stat"><span class="cs-stat-num" style="color:#00A651;">Jan '25</span><span class="cs-stat-label">start date · ongoing · cross-functional team</span></div>
     </div>
@@ -97,22 +103,22 @@
 
     <div class="contribution-block fade-up">
       <span class="contribution-num">Contribution 01</span>
-      <h2>Conversational Commerce Research — 50+ Users</h2>
-      <p>Led the research workstream for a conversational commerce feature targeting users aged 50+. This demographic represents a growing share of PharmEasy's user base — yet existing conversational UI patterns consistently fail them.</p>
+      <h2>Conversational Commerce Research: 50+ Users</h2>
+      <p>Led the research workstream for a conversational commerce feature targeting users aged 50+. This demographic represents a growing share of PharmEasy's user base, yet existing conversational UI patterns consistently fail them.</p>
 
       <div class="phone-gallery">
         <div class="phone-frame">
           <div class="phone-frame-inner"><img src="assets/pharmeasy/pharmeasy-2.png" alt="Family health profile" /></div>
-          <p class="phone-frame-caption">Caregiver profile — daughter managing father's health</p>
+          <p class="phone-frame-caption">Caregiver profile: daughter managing father's health</p>
         </div>
         <div class="phone-frame">
           <div class="phone-frame-inner"><img src="assets/pharmeasy/pharmeasy-3.png" alt="Conversational health assistant" /></div>
-          <p class="phone-frame-caption">50+ conversational flow — voice + simplified UI</p>
+          <p class="phone-frame-caption">50+ conversational flow: voice + simplified UI</p>
         </div>
       </div>
 
       <div class="sub-contribution">
-        <h4>User research — interviews with 50+ demographic</h4>
+        <h4>User research: interviews with 50+ demographic</h4>
         <p>Conducted in-depth interviews to surface healthcare concerns, digital friction points, and shopping preferences. Studied apps they already used comfortably (WhatsApp, YouTube) to understand existing muscle memory before designing new patterns.</p>
       </div>
       <div class="sub-contribution">
@@ -122,7 +128,7 @@
 
       <div class="impact-callout">
         <span class="impact-callout-label">Impact</span>
-        <p>The caregiver use case expanded the definition of the target user for the conversational commerce feature — a net-new product direction surfaced through research, not assumption.</p>
+        <p>The caregiver use case expanded the definition of the target user for the conversational commerce feature: a net-new product direction surfaced through research, not assumption.</p>
       </div>
     </div>
 
@@ -130,17 +136,17 @@
 
     <div class="contribution-block fade-up">
       <span class="contribution-num">Contribution 02</span>
-      <h2>UX Analysis — Journey Mapping at Scale</h2>
+      <h2>UX Analysis: Journey Mapping at Scale</h2>
       <p>Conducted systematic competitor analysis and mapped 10+ user journeys across PharmEasy's health features, translating findings directly into sprint planning inputs.</p>
 
       <div class="phone-gallery">
         <div class="phone-frame">
           <div class="phone-frame-inner"><img src="assets/pharmeasy/pharmeasy-4.png" alt="Order verification journey" /></div>
-          <p class="phone-frame-caption">Order verification — pharmacist review flow</p>
+          <p class="phone-frame-caption">Order verification: pharmacist review flow</p>
         </div>
         <div class="phone-frame">
           <div class="phone-frame-inner"><img src="assets/pharmeasy/pharmeasy-5.png" alt="Conversational recommendation" /></div>
-          <p class="phone-frame-caption">50+ product recommendation — Accu-Chek for seniors</p>
+          <p class="phone-frame-caption">50+ product recommendation: Accu-Chek for seniors</p>
         </div>
       </div>
 
@@ -154,13 +160,13 @@
 
     <div class="contribution-block fade-up">
       <span class="contribution-num">Contribution 03</span>
-      <h2>UI Design — Android, Web & Design System</h2>
+      <h2>UI Design: Android, Web & Design System</h2>
       <p>Designed across both mobile and web platforms, working within PharmEasy's existing design language while contributing new components that extended the system.</p>
 
       <div class="phone-gallery">
         <div class="phone-frame">
           <div class="phone-frame-inner"><img src="assets/pharmeasy/pharmeasy-6.png" alt="Sore throat symptom checker" /></div>
-          <p class="phone-frame-caption">Symptom checker — sore throat flow</p>
+          <p class="phone-frame-caption">Symptom checker: sore throat flow</p>
         </div>
         <div class="phone-frame">
           <div class="phone-frame-inner"><img src="assets/pharmeasy/pharmeasy-8.png" alt="Prescription upload" /></div>
@@ -168,7 +174,7 @@
         </div>
         <div class="phone-frame">
           <div class="phone-frame-inner"><img src="assets/pharmeasy/pharmeasy-9.png" alt="Reorder Metformin" /></div>
-          <p class="phone-frame-caption">One-tap reorder — Metformin 500mg</p>
+          <p class="phone-frame-caption">One-tap reorder: Metformin 500mg</p>
         </div>
       </div>
 
@@ -182,32 +188,32 @@
 
     <div class="contribution-block fade-up">
       <span class="contribution-num">Contribution 04</span>
-      <h2>Strategy — SOPs & Internal Rollout</h2>
+      <h2>Strategy: SOPs & Internal Rollout</h2>
       <p>In the final phase, I contributed to a less typical but equally valuable area: strategic documentation and internal feature rollout planning.</p>
 
       <div class="phone-gallery">
         <div class="phone-frame">
           <div class="phone-frame-inner"><img src="assets/pharmeasy/pharmeasy-7.png" alt="PharmEasy assistant home" /></div>
-          <p class="phone-frame-caption">Assistant home — 4 quick actions</p>
+          <p class="phone-frame-caption">Assistant home: 4 quick actions</p>
         </div>
         <div class="phone-frame">
           <div class="phone-frame-inner"><img src="assets/pharmeasy/pharmeasy-3.png" alt="Conversational flow" /></div>
-          <p class="phone-frame-caption">Voice + text — designed for 50+</p>
+          <p class="phone-frame-caption">Voice + text, designed for 50+</p>
         </div>
       </div>
 
       <div class="sub-contribution">
         <h4>No-cost marketing strategy</h4>
-        <p>Developed organic, zero-budget marketing ideas for feature promotion across social channels — educational content formats aligned with PharmEasy's health-platform context and trust-sensitive brand.</p>
+        <p>Developed organic, zero-budget marketing ideas for feature promotion across social channels, using educational content formats aligned with PharmEasy's health-platform context and trust-sensitive brand.</p>
       </div>
       <div class="sub-contribution">
         <h4>Standard Operating Procedures</h4>
-        <p>Authored SOPs for spreading feature awareness internally — digital channels (emailers, Slack) and offline (printed posters, team briefings) — ensuring frontline staff could articulate new features confidently from launch day.</p>
+        <p>Authored SOPs for spreading feature awareness internally: digital channels (emailers, Slack) and offline (printed posters, team briefings), ensuring frontline staff could articulate new features confidently from launch day.</p>
       </div>
 
       <div class="impact-callout">
         <span class="impact-callout-label">What this taught me</span>
-        <p>A feature that launches without an internal communication plan is half-launched. SOPs gave me a product management perspective — design decisions have to survive the handoff to sales, support, and ops, not just engineering.</p>
+        <p>A feature that launches without an internal communication plan is half-launched. SOPs gave me a product management perspective: design decisions have to survive the handoff to sales, support, and ops, not just engineering.</p>
       </div>
     </div>
 
