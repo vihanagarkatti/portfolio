@@ -82,20 +82,14 @@ const botFlows = {
       link: { label: "Read the case study →", url: "azorte.html" },
       chips: ["See all projects", "What tools does she use?"]
     },
-    "samvit": {
-      text: "Samvit Sudha is an NPO website redesign: I reduced nav from 8 links to 3, put the mission statement above the fold, added impact numbers (1.2k students, 14 villages), and cut the donation path from 4 clicks to 1. Clean, accessible, purpose-first.",
-      link: { label: "Read the case study →", url: "samvitsudha.html" },
-      chips: ["See all projects", "Her design philosophy"]
-    },
-
     /* PROJECTS: general */
     "project": {
-      text: "I have 5 projects: Aashray (domestic violence safety app), Ara (solo travel, research-backed), Techie (retail chatbot, Springer-published + Cambridge-presented), Azorte (service design study), and Samvit Sudha (NPO redesign). Each one is research-first.",
+      text: "I have 4 projects: Aashray (domestic violence safety app), Ara (solo travel, research-backed), Techie (retail chatbot, Springer-published + Cambridge-presented), and Azorte (service design study). Each one is research-first.",
       link: { label: "Browse all projects →", url: "projects.html" },
       chips: ["Tell me about Aashray", "Tell me about Ara", "Tell me about Techie"]
     },
     "social impact": {
-      text: "Two of my five projects are directly social-impact focused: Samvit Sudha, a non-profit whose homepage I redesigned, Aashray (domestic violence survivors), and Ara (solo women's travel safety). Both came from rigorous research; I design for the problem, not the brief.",
+      text: "Two of my four projects are directly social-impact focused: Aashray (domestic violence survivors) and Ara (solo women's travel safety). Both came from rigorous research; I design for the problem, not the brief.",
       link: { label: "See Aashray →", url: "aashray.html" },
       chips: ["Tell me about Ara", "Her research approach"]
     },
@@ -250,7 +244,7 @@ const botFlows = {
       chips: ["See PharmEasy work", "Contact her"]
     },
     "simplif": {
-      text: "My strongest skill is making complex systems feel simple. Aashray distills a fragmented support ecosystem into a 2-tap interface. Techie translates spec sheets into conversational plain language. Samvit Sudha reduced an NGO website's nav from 8 links to 3.",
+      text: "My strongest skill is making complex systems feel simple. Aashray distills a fragmented support ecosystem into a 2-tap interface. Techie translates spec sheets into conversational plain language.",
       chips: ["See Aashray", "See Techie"]
     },
     "systems thinking": {
@@ -435,7 +429,7 @@ const botFlows = {
     "hello": { text: "Hey there! 👋 What can I help you find?", chips: ["See her projects", "Work experience", "How to contact her"] },
     "hi":    { text: "Hi! 👋 I can answer questions about my work, skills, or experience.", chips: ["Her projects", "Contact her"] },
     "see project": {
-      text: "I have 5 projects on the shelf: Aashray, Ara, Techie, Azorte, and Samvit Sudha. Which would you like to know more about?",
+      text: "I have 4 projects on the shelf: Aashray, Ara, Techie, and Azorte. Which would you like to know more about?",
       link: { label: "Browse all →", url: "projects.html" },
       chips: ["Aashray", "Ara", "Techie"]
     },

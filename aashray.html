@@ -58,6 +58,114 @@
       border-top: 1px solid var(--faint);
       background: var(--shelf-bg);
     }
+
+    /* IDEATION / DESIGN-THINKING VISUALS */
+    .ideation-board {
+      background: var(--shelf-bg);
+      border: 1.5px dashed rgba(26,18,8,0.22);
+      border-radius: 10px;
+      padding: 28px 20px 24px;
+      margin: 24px 0 8px;
+    }
+    .board-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--mid);
+      text-align: center;
+      margin-bottom: 18px;
+    }
+    .postit-row { display: flex; flex-wrap: wrap; gap: 18px 14px; justify-content: center; }
+    .postit {
+      font-family: 'Caveat', cursive;
+      font-weight: 600;
+      font-size: 1.05rem;
+      line-height: 1.35;
+      padding: 16px 18px;
+      width: 158px;
+      min-height: 100px;
+      box-shadow: 3px 5px 10px rgba(26,18,8,0.16);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: rgba(26,18,8,0.85);
+      transition: transform .2s ease;
+    }
+    .postit:hover { transform: scale(1.05) rotate(0deg) !important; z-index: 2; }
+    .postit .x-mark { font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 0.78rem; color: #b03a2e; margin-top: 6px; }
+    .postit.yellow { background: #FFF1A8; transform: rotate(-4deg); }
+    .postit.pink   { background: #FFD3E0; transform: rotate(3deg); }
+    .postit.blue   { background: #CFE8FF; transform: rotate(-2deg); }
+    .postit.green  { background: #D6F5D6; transform: rotate(4deg); }
+    .board-arrow-down {
+      text-align: center;
+      font-family: 'Caveat', cursive;
+      font-size: 1.15rem;
+      color: var(--mid);
+      margin: 14px 0 4px;
+    }
+    .unified-badge {
+      display: block;
+      text-align: center;
+      margin: 10px auto 0;
+    }
+    .unified-badge span {
+      display: inline-block;
+      font-family: 'Caveat', cursive;
+      font-weight: 700;
+      font-size: 1.35rem;
+      color: var(--project-accent);
+      background: linear-gradient(to bottom, transparent 58%, rgba(192,57,43,0.16) 58%);
+      padding: 2px 6px;
+      transform: rotate(-1deg);
+    }
+
+    /* INFORMATION ARCHITECTURE MAP */
+    .ia-map { margin: 28px 0 12px; }
+    .ia-hub-wrap { display: flex; justify-content: center; }
+    .ia-hub {
+      background: var(--project-accent);
+      color: #fff;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 12px 26px;
+      border-radius: 999px;
+      box-shadow: 3px 4px 0 rgba(26,18,8,0.12);
+    }
+    .ia-hub-connector { width: 0; height: 22px; border-left: 1.5px dashed rgba(26,18,8,0.3); margin: 0 auto; }
+    .ia-spine { border-top: 1.5px dashed rgba(26,18,8,0.3); }
+    .ia-branches { display: flex; flex-wrap: wrap; justify-content: center; gap: 18px; padding-top: 22px; }
+    .ia-branch { flex: 1; min-width: 150px; max-width: 200px; display: flex; flex-direction: column; align-items: center; position: relative; }
+    .ia-branch::before {
+      content: '';
+      position: absolute;
+      top: -22px; left: 50%;
+      width: 0; height: 22px;
+      border-left: 1.5px dashed rgba(26,18,8,0.3);
+    }
+    .ia-branch-head {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: var(--project-accent);
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    .ia-leaf {
+      background: var(--paper);
+      border: 1px solid var(--faint);
+      border-radius: 6px;
+      padding: 8px 12px;
+      font-size: 0.75rem;
+      color: rgba(26,18,8,0.75);
+      text-align: center;
+      margin-bottom: 8px;
+      width: 100%;
+    }
   </style>
 </head>
 <body>
@@ -144,24 +252,17 @@
         <p>The deeper insight from research: most survivors don't leave immediately. They stay for financial reasons, for their children, out of fear. Any effective tool has to meet them where they are, not where we assume they should be.</p>
       </div>
 
-      <div class="phone-gallery">
-        <div class="phone-frame">
-          <div class="phone-frame-inner"><img src="assets/aashray/aashray-3.png" alt="Aashray legal information screen" /></div>
-          <p class="phone-frame-caption">Legal information: DV Act simplified</p>
-        </div>
-        <div class="phone-frame">
-          <div class="phone-frame-inner"><img src="assets/aashray/aashray-4.png" alt="Aashray legal search" /></div>
-          <p class="phone-frame-caption">Legal search: alimony rights</p>
-        </div>
-        <div class="phone-frame">
-          <div class="phone-frame-inner"><img src="assets/aashray/aashray-7.png" alt="Aashray job listing" /></div>
-          <p class="phone-frame-caption">Discreet job listings</p>
-        </div>
-        <div class="phone-frame">
-          <div class="phone-frame-inner"><img src="assets/aashray/aashray-8.png" alt="Aashray wellness support" /></div>
-          <p class="phone-frame-caption">Wellness & counselling</p>
+      <div class="ideation-board">
+        <div class="board-label">What existed before Aashray</div>
+        <div class="postit-row">
+          <div class="postit yellow">SOS apps<span class="x-mark">✗ no shelter info</span></div>
+          <div class="postit blue">Legal directories<span class="x-mark">✗ no discretion</span></div>
+          <div class="postit pink">NGO shelter maps<span class="x-mark">✗ hard to find</span></div>
+          <div class="postit green">Job & financial portals<span class="x-mark">✗ not discreet</span></div>
         </div>
       </div>
+      <p class="board-arrow-down">↓ Aashray combines all four, discreetly</p>
+      <div class="unified-badge"><span>🛡️ Shelter + Legal + Financial + SOS, one app</span></div>
     </div>
 
     <!-- RESEARCH -->
@@ -219,8 +320,35 @@
     <div class="cs-section fade-up">
       <span class="cs-section-label">04 · Architecture</span>
       <h2>Structuring four support systems into one app</h2>
+      <p>Each support type needed its own depth without the app feeling like four apps stitched together. The IA had to make every category reachable from the home screen in a single tap.</p>
 
-
+      <div class="ia-map">
+        <div class="ia-hub-wrap"><div class="ia-hub">🛡️ Aashray</div></div>
+        <div class="ia-hub-connector"></div>
+        <div class="ia-spine"></div>
+        <div class="ia-branches">
+          <div class="ia-branch">
+            <div class="ia-branch-head">🏠 Shelter</div>
+            <div class="ia-leaf">Verified shelter map</div>
+            <div class="ia-leaf">Booking + availability</div>
+          </div>
+          <div class="ia-branch">
+            <div class="ia-branch-head">⚖️ Legal Aid</div>
+            <div class="ia-leaf">DV Act, simplified</div>
+            <div class="ia-leaf">Free lawyer connect</div>
+          </div>
+          <div class="ia-branch">
+            <div class="ia-branch-head">💰 Financial</div>
+            <div class="ia-leaf">Govt scheme matching</div>
+            <div class="ia-leaf">Discreet job listings</div>
+          </div>
+          <div class="ia-branch">
+            <div class="ia-branch-head">🆘 SOS</div>
+            <div class="ia-leaf">Silent alert, hold 3s</div>
+            <div class="ia-leaf">Offline queue</div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- DESIGN / SCREENS -->
@@ -238,12 +366,24 @@
           <p class="phone-frame-caption">Home: 4 support types, 2 taps away</p>
         </div>
         <div class="phone-frame">
+          <div class="phone-frame-inner"><img src="assets/aashray/aashray-3.png" alt="Aashray legal information screen" /></div>
+          <p class="phone-frame-caption">Legal information: DV Act simplified</p>
+        </div>
+        <div class="phone-frame">
+          <div class="phone-frame-inner"><img src="assets/aashray/aashray-4.png" alt="Aashray legal search" /></div>
+          <p class="phone-frame-caption">Legal search: alimony rights</p>
+        </div>
+        <div class="phone-frame">
           <div class="phone-frame-inner"><img src="assets/aashray/aashray-6.png" alt="Financial resources" /></div>
           <p class="phone-frame-caption">Financial resources: govt schemes</p>
         </div>
         <div class="phone-frame">
           <div class="phone-frame-inner"><img src="assets/aashray/aashray-7.png" alt="Discreet job listings" /></div>
           <p class="phone-frame-caption">Discreet employment listings</p>
+        </div>
+        <div class="phone-frame">
+          <div class="phone-frame-inner"><img src="assets/aashray/aashray-8.png" alt="Aashray wellness support" /></div>
+          <p class="phone-frame-caption">Wellness & counselling</p>
         </div>
         <div class="phone-frame">
           <div class="phone-frame-inner"><img src="assets/aashray/aashray-5.png" alt="SOS screen" /></div>
@@ -279,13 +419,28 @@
     <div class="cs-section fade-up">
       <span class="cs-section-label">06 · Impact</span>
       <h2>What this changes</h2>
-      <div class="two-col">
-        <div>
-          <p><strong>Design gap addressed:</strong> First proposed solution combining shelter discovery, legal aid, government scheme matching, and SOS in one interface, verified through competitive audit of 12 existing apps.</p>
-          <p><strong>Usability testing:</strong> 5 task-completion scenarios tested with social workers and students. Average task completion: under 3 taps. Quick Exit executed in under 1 second by all testers.</p>
+      <p>Verified through a competitive audit of 12 existing apps, none combined all four support types, and validated with social workers and students in usability testing.</p>
+
+      <div class="cs-stats" style="margin:20px 0 8px;">
+        <div class="cs-stat">
+          <span class="cs-stat-num" style="color:#c0392b;">12 → 0</span>
+          <span class="cs-stat-label">apps audited; zero combined all four support types</span>
         </div>
+        <div class="cs-stat">
+          <span class="cs-stat-num" style="color:#c0392b;">&lt;3</span>
+          <span class="cs-stat-label">taps average, across 5 task-completion test scenarios</span>
+        </div>
+        <div class="cs-stat">
+          <span class="cs-stat-num" style="color:#c0392b;">&lt;1s</span>
+          <span class="cs-stat-label">Quick Exit executed by every tester</span>
+        </div>
+      </div>
+
+      <div class="two-col" style="margin-top:20px;">
         <div>
           <p><strong>What I would measure if shipped:</strong> Shelter booking initiations per week, legal consultation connections, Quick Exit usage (sign of real-world safety context), and return visits (signal of trust).</p>
+        </div>
+        <div>
           <p><strong>What I learned:</strong> Safety design demands you design for the worst moment, not the average moment. Every micro-interaction carries weight when the stakes are this high.</p>
         </div>
       </div>

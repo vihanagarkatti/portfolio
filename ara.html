@@ -41,6 +41,53 @@
     .img-full { margin: 28px 0; border-radius: 8px; overflow: hidden; border: 1px solid var(--faint); }
     .img-full img { width: 100%; height: auto; display: block; }
     .img-caption { padding: 10px 16px; font-size: 0.78rem; color: var(--mid); font-style: italic; border-top: 1px solid var(--faint); background: var(--shelf-bg); }
+
+    /* IDEATION / DESIGN-THINKING VISUALS */
+    .ideation-board {
+      background: var(--shelf-bg);
+      border: 1.5px dashed rgba(26,18,8,0.22);
+      border-radius: 10px;
+      padding: 28px 20px 24px;
+      margin: 24px 0 8px;
+    }
+    .board-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--mid);
+      text-align: center;
+      margin-bottom: 18px;
+    }
+    .postit-row { display: flex; flex-wrap: wrap; gap: 18px 14px; justify-content: center; }
+    .postit {
+      font-family: 'Caveat', cursive;
+      font-weight: 600;
+      font-size: 1.08rem;
+      line-height: 1.3;
+      padding: 16px 18px;
+      width: 152px;
+      min-height: 100px;
+      box-shadow: 3px 5px 10px rgba(26,18,8,0.16);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: rgba(26,18,8,0.85);
+      transition: transform .2s ease;
+    }
+    .postit:hover { transform: scale(1.05) rotate(0deg) !important; z-index: 2; }
+    .postit.yellow { background: #FFF1A8; transform: rotate(-4deg); }
+    .postit.pink   { background: #FFD3E0; transform: rotate(3deg); }
+    .postit.blue   { background: #CFE8FF; transform: rotate(-2deg); }
+    .postit.green  { background: #D6F5D6; transform: rotate(4deg); }
+    .board-arrow-down {
+      text-align: center;
+      font-family: 'Caveat', cursive;
+      font-size: 1.15rem;
+      color: var(--mid);
+      margin: 14px 0 -4px;
+    }
   </style>
 </head>
 <body>
@@ -118,24 +165,48 @@
       <span class="cs-section-label">01 · Problem</span>
       <h2>The gap nobody filled</h2>
 
-      <div class="img-grid">
-        <div class="img-grid-item">
-          <img src="assets/ara/ara-2.png" alt="Ara safety map" />
-          <p class="img-grid-caption">Safety map: Paris, verified travelers</p>
-        </div>
-        <div class="img-grid-item">
-          <img src="assets/ara/ara-4.png" alt="Ara bookings and stay" />
-          <p class="img-grid-caption">Bookings: safe stay verified</p>
-        </div>
-        <div class="img-grid-item">
-          <img src="assets/ara/ara-9.png" alt="Ara profile menu" />
-          <p class="img-grid-caption">Profile & safety preferences</p>
+      <div class="ideation-board">
+        <div class="board-label">Competitive audit → 12 apps mapped</div>
+        <svg viewBox="0 0 600 240" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:560px;display:block;margin:0 auto;overflow:visible;">
+          <defs>
+            <marker id="araArrowL" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+              <path d="M0,0 L6,3 L0,6 Z" fill="#6C5CE7"/>
+            </marker>
+            <marker id="araArrowR" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+              <path d="M0,0 L6,3 L0,6 Z" fill="#FF7043"/>
+            </marker>
+          </defs>
+
+          <circle cx="165" cy="125" r="105" fill="#EEE9FF" stroke="#6C5CE7" stroke-width="1.5"/>
+          <text x="165" y="55" text-anchor="middle" font-family="DM Sans" font-weight="700" font-size="13" fill="#4A3DB5">SOS APPS</text>
+          <text x="165" y="88" text-anchor="middle" font-family="DM Sans" font-size="10.5" fill="rgba(74,61,181,0.75)">Panic button</text>
+          <text x="165" y="106" text-anchor="middle" font-family="DM Sans" font-size="10.5" fill="rgba(74,61,181,0.75)">Emergency contacts</text>
+          <text x="165" y="172" text-anchor="middle" font-family="DM Sans" font-weight="700" font-size="11" fill="#D4380D">✗ no offline mode</text>
+
+          <circle cx="435" cy="125" r="105" fill="#FFF0EB" stroke="#FF7043" stroke-width="1.5"/>
+          <text x="435" y="55" text-anchor="middle" font-family="DM Sans" font-weight="700" font-size="13" fill="#C1440E">TRAVEL PLANNING</text>
+          <text x="435" y="88" text-anchor="middle" font-family="DM Sans" font-size="10.5" fill="rgba(193,68,14,0.75)">Itineraries</text>
+          <text x="435" y="106" text-anchor="middle" font-family="DM Sans" font-size="10.5" fill="rgba(193,68,14,0.75)">Bookings</text>
+          <text x="435" y="172" text-anchor="middle" font-family="DM Sans" font-weight="700" font-size="11" fill="#D4380D">✗ no safety layer</text>
+
+          <path d="M255,125 C270,125 278,125 288,125" stroke="#6C5CE7" stroke-width="1.5" fill="none" marker-end="url(#araArrowL)"/>
+          <path d="M345,125 C330,125 322,125 312,125" stroke="#FF7043" stroke-width="1.5" fill="none" marker-end="url(#araArrowR)"/>
+
+          <circle cx="300" cy="125" r="54" fill="#faf8f3" stroke="#1a1208" stroke-width="1.5" stroke-dasharray="4 3"/>
+          <text x="300" y="113" text-anchor="middle" font-family="Caveat" font-weight="700" font-size="21" fill="#1a1208">the gap</text>
+          <text x="300" y="133" text-anchor="middle" font-family="DM Sans" font-size="9" fill="rgba(26,18,8,0.6)">offline SOS +</text>
+          <text x="300" y="146" text-anchor="middle" font-family="DM Sans" font-size="9" fill="rgba(26,18,8,0.6)">real-time alerts</text>
+        </svg>
+
+        <div class="postit-row" style="margin-top:20px;">
+          <div class="postit yellow">12 apps audited</div>
+          <div class="postit pink">0 covered both</div>
         </div>
       </div>
 
       <div class="two-col" style="margin-top:24px;">
         <p>A competitive audit of 12 solo travel apps found a consistent split: apps either offered basic SOS (no offline fallback) or itinerary planning (no safety features). The intersection, real-time alerts plus offline capability, was absent from the market.</p>
-        <p>Primary research confirmed what the data suggested: solo women travellers made safety compromises constantly: avoiding neighbourhoods, manually checking in with friends, skipping activities, because tools available left them unsupported.</p>
+        <p>Primary research confirmed what the data suggested: solo women travellers made safety compromises constantly, avoiding neighbourhoods, manually checking in with friends, skipping activities, because the tools available left them unsupported.</p>
       </div>
     </div>
 
@@ -143,18 +214,18 @@
       <span class="cs-section-label">02 · Research</span>
       <h2>What the numbers told us</h2>
 
-      <div class="img-grid">
-        <div class="img-grid-item">
-          <img src="assets/ara/ara-3.png" alt="Research statistics and key data points" />
-          <p class="img-grid-caption">Research: 59% solo travellers are women, competitive audit findings</p>
-        </div>
-        <div class="img-grid-item">
-          <img src="assets/ara/ara-4.png" alt="Competitive audit and user personas" />
-          <p class="img-grid-caption">Competitive audit: 12 apps benchmarked, 3 personas defined</p>
+      <div class="ideation-board">
+        <div class="board-label">Field notes → raw quotes from solo travellers</div>
+        <div class="postit-row">
+          <div class="postit yellow">"I always text a friend before I go out alone."</div>
+          <div class="postit blue">"I avoid this street after dark. Just a feeling."</div>
+          <div class="postit pink">"I'd trust a verified traveller more than a stranger."</div>
+          <div class="postit green">"Raw crime alerts freak me out more than they help."</div>
         </div>
       </div>
+      <p class="board-arrow-down">↓ synthesized into 4 key insights</p>
 
-      <div class="insight-grid" style="margin-top:24px;">
+      <div class="insight-grid" style="margin-top:8px;">
         <div class="insight-card">
           <span class="insight-card-icon">👩</span>
           <h4>59% of solo travellers are women</h4>
